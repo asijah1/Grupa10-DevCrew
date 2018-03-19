@@ -1,5 +1,5 @@
 # Grupa10-DevCrew
----
+
 
 ## Članovi tima: 
 1. Amir Sijah
@@ -7,12 +7,10 @@
 3. Faruk Šehić
 
 ## Opis projekta
----
 
 U Bosni i Hercegovini iz dana u dan raste turizam. Samim tim javlja se potreba za boljim uvidom u turistička događanja te interakcije turistička agencija-posjetioc. Imajući ovo na umu, mi smo odlućili da napravimo aplikaciju koja bi adekvatno odgovorila na dati zahtjev.
 
 ## Procesi sistema
----
 
 #### 1. Registracija korisnika
 
