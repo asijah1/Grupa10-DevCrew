@@ -40,6 +40,8 @@ Obični korisnici pri prijavi na sistem dobivaju listu događaja po željenim kr
 
 #### 7. Obavještenje korisnika o događaju
 
+Automatizam koji obavještava korisnika o statusu događaja koji su od njegovog interesa. Ovo podrazumijeva registraciju novog događaja, prolongiranje, otkazivanje i slično. 
+
 
 
 
