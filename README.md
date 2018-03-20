@@ -1,6 +1,6 @@
-﻿# Grupa10-DevCrew
+# Grupa10-DevCrew
 
-# ![alt text](https://github.com/ooad-2017-2018/Grupa10-DevCrew/tree/master/Resources/logo.png) Travel your way
+# ![alt text](https://github.com/ooad-2017-2018/Grupa10-DevCrew/blob/master/Resources/logo.png) Travel your way
 
 
 ## Članovi tima: 
