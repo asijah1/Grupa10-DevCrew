@@ -100,6 +100,12 @@ Nakon što agnecija aplicira za registraciju iste, administrator pregleda dokume
 
 ## Akteri
 
+1. **Registrovani korisnik** - akter koji unosi svoje podatke, te se prijavljuje na željene događaje
+2. **Gost korisnik** - akter koji ima uvid u cijelu listu događaja, ali bez mogućnosti prijave na događaje
+3. **Turistička agencija** - unosi svoje podatke, registruje nove događaje te modifikuje postojeće
+4. **Administrator** - koordinira i nadgleda rad sistema, verifikuje zahtjeve za registraciju agencija i koordinira stanjem na računu registrovanog korisnika i agencije
+
+
 
 
 
