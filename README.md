@@ -77,7 +77,28 @@ Da bi korisnik imao uspješnu interakciju sa agencijama, potrebno je da ima nova
 
 #### 10. Obračun popusta
 
-Svaka agencija generiše uslove eventualnog popusta. Korsinik koji aplicira na neki događaj prilaže adekvatne dokumente na formi za prijavu. Agencija odobrava/odbija zahtjev korisnika.
+Svaka agencija generiše uslove eventualnog popusta. Korisnik koji aplicira na neki događaj prilaže adekvatne dokumente na formi za prijavu. Agencija odobrava/odbija zahtjev korisnika.
+
+#### 11. Verifikacija registracije turističke agencije
+
+Nakon što agnecija aplicira za registraciju iste, administrator pregleda dokumentaciju koju agencija šalje te shodno tome odobrava/odbija zahtjev za registraciju.
+
+## Funkcionalnosti
+
+* Mogućnost registracije korisnika sa specificiranim podacima
+* Mogućnost prijave korisnika kao gost uz pregled događaja
+* Mogućnost registracije agencije 
+* Prijave korisnika sistema
+* Prikaz restriktivne liste događaja za registrovane korisnike
+* Prikaz potpune liste događaja za goste ili registrovane korisnike 
+* Mogućnost registracije novog događaja
+* Prijava na događaj
+* Modifikacija statusa događaja
+* Mogućnost uplate kod administratora
+* Agencija vrši naplatu za svoje usluge
+* Pravo na popust
+
+## Akteri
 
 
 
