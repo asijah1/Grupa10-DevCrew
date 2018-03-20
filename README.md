@@ -25,13 +25,27 @@ Turizam je mnogo popularna grana privrede. Mnoge države ulažu ogromne svote no
 
 #### 1. Registracija korisnika
 
-Da bi korisnik koristio aplikaciju poželjno je da se korisnik registruje. Pri tome će unijeti karakteristične informacije o sebi uz jedinstveno korisničko ime i šifru kojim se dati korisnik identificira.
-Također ćemo omogućiti pristup aplikaciji za korisnike koji se ne žele registrovati, uz ograničen pristup resursima i funkcionalnostima samog sistema.
+Da bi korisnik koristio aplikaciju poželjno je da se korisnik registruje. Pri tome će unijeti karakteristične informacije o sebi uz jedinstveno korisničko ime i šifru kojim se dati korisnik identificira. Korisnik tada upisuje osnovne podatke o sebi:
+  * Ime
+  * Prezime
+  * Datum rođenja
+  * Država
+  * E-mail
+  * Korisničko ime
+  * Šifra
+
+Također će biti omogućen pristup aplikaciji za korisnike koji se ne žele registrovati, uz ograničen pristup resursima i funkcionalnostima samog sistema.
 
 
 #### 2. Registracija turističke agencije
 
-Svaka turistčka agencija koja želi pružati usluge turistima(ili ljubiteljima domovinskih kulturnih dobara) mora biti registrovana na sistemu uz restriktivnu provjeru unesenih podataka. Razlog za takvu provjeru je da se onemogući kreiranje dodatnog računa za jednu agenciju. Jos jedan od razloga za rigoroznu provjeru je da se sprijeci registracija laznih turističkih agencija. 
+Svaka turistčka agencija koja želi pružati usluge turistima(ili ljubiteljima domovinskih kulturnih dobara) mora biti registrovana na sistemu uz restriktivnu provjeru unesenih podataka. Razlog za takvu provjeru je da se onemogući kreiranje dodatnog računa za jednu agenciju. Jos jedan od razloga za rigoroznu provjeru je da se sprijeci registracija laznih turističkih agencija. Agencija tada upisuje osnovne podatke:
+
+  * Naziv agencije
+  * Datum osnivanja
+  * Sjedište
+  * E-mail
+  * Šifra
 
 #### 3. Prijava korisnika na sistem
 
@@ -51,7 +65,24 @@ Obični korisnici pri prijavi na sistem dobivaju listu događaja po željenim kr
 
 #### 7. Obavještenje korisnika o događaju
 
-Automatizam koji obavještava korisnika o statusu događaja koji su od njegovog interesa. Ovo podrazumijeva registraciju novog događaja, prolongiranje, otkazivanje i slično. 
+Automatizam koji obavještava korisnika o statusu događaja koji su od njegovog interesa. Ovo podrazumijeva registraciju novog događaja, prolongiranje, otkazivanje i slično.
+
+#### 8. Naplata usluga
+
+Svaka agencija koristi modul za naplatu svojih usluga gdje se kreira posebna forma sa stavkama za troškove i eventualne popuste. Ta forma se šalje korisniku koji aplicira za neki događaj. Nakon uspješne naplate, agencija stavlja korisnika na listu osoba koji idu na događaj, a stanje na računu korisnika se smanjuje za vrijednost prikazanoj na formi.
+
+#### 9. Uplate na račun korisnika
+
+Da bi korisnik imao uspješnu interakciju sa agencijama, potrebno je da ima novac na računu. Uplate vrši kod administratora sistema gotovinom. Administrator tada pristupa profilu korisnika i uvećava njegovo stanje na računu.
+
+#### 10. Obračun popusta
+
+Svaka agencija generiše uslove eventualnog popusta. Korsinik koji aplicira na neki događaj prilaže adekvatne dokumente na formi za prijavu. Agencija odobrava/odbija zahtjev korisnika.
+
+
+
+
+
 
 
 
