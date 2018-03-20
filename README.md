@@ -34,12 +34,12 @@ Da bi korisnik koristio aplikaciju poželjno je da se korisnik registruje. Pri t
   * Korisničko ime
   * Šifra
 
-Također će biti omogućen pristup aplikaciji za korisnike koji se ne žele registrovati, uz ograničen pristup resursima i funkcionalnostima samog sistema.
+Također će biti omogućen pristup aplikaciji za korisnike koji se ne žele registrovati, uz ograničen pristup resursima i funkcionalnostima samog sistema. Gost korisnik će imati priliku vidjeti listu aktivnih događaja, ali bez prava na aplikaciju za prisustvo nekom događaju.
 
 
 #### 2. Registracija turističke agencije
 
-Svaka turistčka agencija koja želi pružati usluge turistima(ili ljubiteljima domovinskih kulturnih dobara) mora biti registrovana na sistemu uz restriktivnu provjeru unesenih podataka. Razlog za takvu provjeru je da se onemogući kreiranje dodatnog računa za jednu agenciju. Jos jedan od razloga za rigoroznu provjeru je da se sprijeci registracija laznih turističkih agencija. Agencija tada upisuje osnovne podatke:
+Svaka turistička agencija koja želi pružati usluge turistima(ili ljubiteljima domovinskih kulturnih dobara) mora biti registrovana na sistemu uz restriktivnu provjeru unesenih podataka. Razlog za takvu provjeru je da se onemogući kreiranje dodatnog računa za jednu agenciju. Još jedan od razloga za rigoroznu provjeru je da se sprijeci registracija laznih turističkih agencija. Agencija tada upisuje osnovne podatke:
 
   * Naziv agencije
   * Datum osnivanja
@@ -77,7 +77,7 @@ Da bi korisnik imao uspješnu interakciju sa agencijama, potrebno je da ima nova
 
 #### 10. Obračun popusta
 
-Svaka agencija generiše uslove eventualnog popusta. Korisnik koji aplicira na neki događaj prilaže adekvatne dokumente na formi za prijavu. Agencija odobrava/odbija zahtjev korisnika.
+Svaka agencija generiše uslove eventualnog popusta. Korisnik koji aplicira na neki događaj prilaže adekvatne dokumente na formi za prijavu. Takvi dokumenti su neophodni za eventualno obračunavanje popusta (potvrda da je student i tako dalje). Agencija odobrava/odbija zahtjev korisnika.
 
 #### 11. Verifikacija registracije turističke agencije
 
