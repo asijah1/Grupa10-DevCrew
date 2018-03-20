@@ -8,7 +8,7 @@
 
 ## Opis projekta
 
-U Bosni i Hercegovini iz dana u dan raste turizam. Samim tim javlja se potreba za boljim uvidom u turistička događanja te interakcije turistička agencija-posjetioc. Imajući ovo na umu, mi smo odlućili da napravimo aplikaciju koja bi adekvatno odgovorila na dati zahtjev.
+Turizam je mnogo popularna grana privrede. Mnoge države ulažu ogromne svote novca kako bi turizam u svojoj zemlji učinio što pristupačnijim i što zanimljivijim. Samim tim javlja se potreba za boljim uvidom u turistička događanja te interakcije na nivou turistička agencija-posjetioc. Posjeta kulturnim znamenitostima, prirodnim ljepotama neke države i slične aktivnosti zahtjeva dobru organizaciju prilikom kreiranja takvih događaja. "Travel your way" može pomoći i posjetiocima (bolji pregled) i turističkim agencijama (bolja organizacija). Imajući ovo na umu, mi smo odlučili da napravimo aplikaciju koja bi adekvatno odgovorila na dati zahtjev.
 
 ## Procesi sistema
 
