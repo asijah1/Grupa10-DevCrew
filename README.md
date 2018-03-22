@@ -71,11 +71,11 @@ Automatizam koji obavještava korisnika o statusu događaja koji su od njegovog 
 
 Svaka agencija koristi modul za naplatu svojih usluga gdje se kreira posebna forma sa stavkama za troškove i eventualne popuste. Ta forma se šalje korisniku koji aplicira za neki događaj. Nakon uspješne naplate, agencija stavlja korisnika na listu osoba koji idu na događaj, a stanje na računu korisnika se smanjuje za vrijednost prikazanoj na formi.
 
-#### 10. Obračun popusta
+#### 9. Obračun popusta
 
 Svaka agencija generiše uslove eventualnog popusta. Korisnik koji aplicira na neki događaj prilaže adekvatne dokumente na formi za prijavu. Takvi dokumenti su neophodni za eventualno obračunavanje popusta (potvrda da je student i tako dalje). Agencija odobrava/odbija zahtjev korisnika.
 
-#### 11. Verifikacija registracije turističke agencije
+#### 10. Verifikacija registracije turističke agencije
 
 Nakon što agnecija aplicira za registraciju iste, administrator pregleda dokumentaciju koju agencija šalje te shodno tome odobrava/odbija zahtjev za registraciju.
 
