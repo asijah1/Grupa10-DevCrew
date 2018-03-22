@@ -75,6 +75,8 @@ Da bi se korisnik mogao prijaviti na događaj treba imati otvoren paypal racun(n
 * Prikaz potpune liste događaja za goste ili registrovane korisnike 
 * Mogućnost registracije novog događaja
 * Mogućnost prijave na događaj od strane registrovanih korisnika
+* Mogućnost otkazivanja rezervacije
+* Povrat novca u slucaju otkazivanja rezervacije
 * Mogućnost ocjenjivanja agencije od strane registrovanih korisnika
 * Mogućnost ostavljanja komentara od strane registrovanih korisnika
 * Modifikacija statusa događaja
