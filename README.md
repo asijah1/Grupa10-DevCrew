@@ -71,10 +71,6 @@ Automatizam koji obavještava korisnika o statusu događaja koji su od njegovog 
 
 Svaka agencija koristi modul za naplatu svojih usluga gdje se kreira posebna forma sa stavkama za troškove i eventualne popuste. Ta forma se šalje korisniku koji aplicira za neki događaj. Nakon uspješne naplate, agencija stavlja korisnika na listu osoba koji idu na događaj, a stanje na računu korisnika se smanjuje za vrijednost prikazanoj na formi.
 
-#### 9. Uplate na račun korisnika
-
-Da bi korisnik imao uspješnu interakciju sa agencijama, potrebno je da ima novac na računu. Uplate vrši kod administratora sistema gotovinom. Administrator tada pristupa profilu korisnika i uvećava njegovo stanje na računu.
-
 #### 10. Obračun popusta
 
 Svaka agencija generiše uslove eventualnog popusta. Korisnik koji aplicira na neki događaj prilaže adekvatne dokumente na formi za prijavu. Takvi dokumenti su neophodni za eventualno obračunavanje popusta (potvrda da je student i tako dalje). Agencija odobrava/odbija zahtjev korisnika.
