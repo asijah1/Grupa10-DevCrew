@@ -78,7 +78,6 @@ Prije nego što se korisnik(turist) može prijaviti na događaj, potrebno je da 
 * Mogućnost ocjenjivanja agencije od strane registrovanih korisnika
 * Mogućnost ostavljanja komentara od strane registrovanih korisnika
 * Modifikacija statusa događaja
-* Mogućnost uplate kod administratora
 * Agencija vrši naplatu za svoje usluge
 * Pravo na popust
 
