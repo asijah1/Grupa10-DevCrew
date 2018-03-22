@@ -39,7 +39,7 @@ Također će biti omogućen pristup aplikaciji za korisnike koji se ne žele reg
 
 #### 2. Registracija turističke agencije
 
-Svaka turistička agencija koja želi pružati usluge turistima(ili ljubiteljima domovinskih kulturnih dobara) mora biti registrovana na sistemu uz restriktivnu provjeru unesenih podataka. Razlog za takvu provjeru je da se onemogući kreiranje dodatnog računa za jednu agenciju. Još jedan od razloga za rigoroznu provjeru je da se sprijeci registracija laznih turističkih agencija. Agencija tada upisuje osnovne podatke:
+Svaka turistička agencija koja želi pružati usluge turistima(ili ljubiteljima domovinskih kulturnih dobara) mora biti registrovana na sistemu uz restriktivnu provjeru unesenih podataka. Razlog za takvu provjeru je da se onemogući kreiranje dodatnog računa za jednu agenciju. Još jedan od razloga za rigoroznu provjeru je da se sprijeci registracija lažnih turističkih agencija. Agencija tada upisuje osnovne podatke:
 
   * Naziv agencije
   * Datum osnivanja
@@ -47,37 +47,23 @@ Svaka turistička agencija koja želi pružati usluge turistima(ili ljubiteljima
   * E-mail
   * Šifra
 
-#### 3. Prijava korisnika na sistem
+Nakon što agencija aplicira za registraciju iste, administrator pregleda dokumentaciju koju agencija šalje te shodno tome odobrava/odbija zahtjev za registraciju.
 
-Korisnik uz ispravno uneseno korisničko ime i šifru(koji su specificirani pri registraciji) se prijavljuje na sistem. U slučaju da korisnik zaboravi korisničko ime ili šifru, tada ga sistem može obavijestiti o podsjećanju korisničkog imena i promjeni šifre. U mail-u će se nalaziti automatski generisan kod pomoću kojeg će se omogućiti korisniku promjena šifre te će se korisnik savjetovati da blagovremeno promijeni šifru na željenu.
+#### 3. Prijava korisnikâ aplikacije na sistem
 
-#### 4. Prijava agencije na sistem
+Korisnik(turista ili turistička agencija) uz ispravno uneseno korisničko ime(naziv agencije) i šifru(koji su specificirani pri registraciji) se prijavljuje na sistem. U slučaju da korisnik zaboravi korisničko ime ili šifru, tada ga sistem može obavijestiti o podsjećanju korisničkog imena i promjeni šifre. U mail-u će se nalaziti automatski generisan kod pomoću kojeg će se omogućiti korisniku promjena šifre te će se korisnik savjetovati da blagovremeno promijeni šifru na željenu.
 
-Agencija uz ispravno uneseno korisničko ime i šifru(koji su specificirani pri registraciji agencije) se prijavljuje na sistem. U slučaju da agencija ne može pristupiti svom sistemu (zaboravi korisničko ime ili šifru), tada je sistem može obavijestiti o podsjećanju korisničkog imena i promjeni šifre. U mail-u će se nalaziti automatski generisan kod pomoću kojeg će se omogućiti agenciji promjena šifre.
+#### 4. Organizacija događaja
 
-#### 5. Registracija novog događaja
+Ključna radnja neke turističke agencije jeste registracija događaja koji sama agencija organizuje. Glavne karakteristike samog događaja jesu grad(i adresa gdje će se održati), broj mjesta za događaj, cijena za jednu osobu (mogući popusti), vrijeme i trajanje održavanja, vrsta događaja i druge pojedinosti. Obični korisnici(turisti) pri prijavi na sistem dobivaju listu događaja po željenim kriterijima. Željeni kriteriji ne moraju biti specificirani - u tom slučaju korisnik će dobiti listu svih događaja. Uz događaje postoji i sistem obavještenja za turiste o statusu događaja koji su od njihovog interesa. Ovo podrazumijeva registraciju novog događaja, prolongiranje, otkazivanje i slično.
 
-Ključna radnja neke turističke agencije jeste registracija događaja koji sama agencija organizuje. Glavne karakteristike samog događaja jesu grad(i adresa gdje će se održati), broj mjesta za događaj, cijena za jednu osobu (mogući popusti), vrijeme i trajanje održavanja, vrsta događaja i druge pojedinosti.
+#### 5. Naplata usluga
 
-#### 6. Prijava korisnika za događaj
+Svaka agencija koristi modul za naplatu svojih usluga gdje se kreira posebna forma sa stavkama za troškove i eventualne popuste. Ta forma se šalje korisniku koji aplicira za neki događaj. Nakon uspješne naplate, agencija stavlja korisnika na listu osoba koji idu na događaj, a stanje na računu korisnika se smanjuje za vrijednost prikazanoj na formi. Da bi korisnik imao pravo na popust(ako postoji za određeni događaj) potrebno je da priloži adekvatne dokumente na formi za prijavu. Takvi dokumenti su neophodni za eventualno obračunavanje popusta (potvrda da je student i tako dalje). Agencija odobrava/odbija zahtjev korisnika.
 
-Obični korisnici pri prijavi na sistem dobivaju listu događaja po željenim kriterijima. Željeni kriteriji ne moraju biti specificirani - u tom slučaju korisnik će dobiti listu svih događaja.
+#### 6. Transakcije vezane za račun korisnika
 
-#### 7. Obavještenje korisnika o događaju
-
-Automatizam koji obavještava korisnika o statusu događaja koji su od njegovog interesa. Ovo podrazumijeva registraciju novog događaja, prolongiranje, otkazivanje i slično.
-
-#### 8. Naplata usluga
-
-Svaka agencija koristi modul za naplatu svojih usluga gdje se kreira posebna forma sa stavkama za troškove i eventualne popuste. Ta forma se šalje korisniku koji aplicira za neki događaj. Nakon uspješne naplate, agencija stavlja korisnika na listu osoba koji idu na događaj, a stanje na računu korisnika se smanjuje za vrijednost prikazanoj na formi.
-
-#### 9. Obračun popusta
-
-Svaka agencija generiše uslove eventualnog popusta. Korisnik koji aplicira na neki događaj prilaže adekvatne dokumente na formi za prijavu. Takvi dokumenti su neophodni za eventualno obračunavanje popusta (potvrda da je student i tako dalje). Agencija odobrava/odbija zahtjev korisnika.
-
-#### 10. Verifikacija registracije turističke agencije
-
-Nakon što agnecija aplicira za registraciju iste, administrator pregleda dokumentaciju koju agencija šalje te shodno tome odobrava/odbija zahtjev za registraciju.
+Prije nego što se korisnik(turist) može prijaviti na događaj, potrebno je da ima novac na računu. Dakle pored transakcije novca korisnika i agencije prethodno je potrebno obaviti transakciju novca sistema i korisnika. Korisnik uplate vrši kod administratora sistema gotovinom. Administrator tada pristupa profilu korisnika i uvećava njegovo stanje na računu.
 
 ## Funkcionalnosti
 
