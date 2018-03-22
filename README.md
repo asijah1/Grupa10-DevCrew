@@ -92,7 +92,9 @@ Nakon što agnecija aplicira za registraciju iste, administrator pregleda dokume
 * Prikaz restriktivne liste događaja za registrovane korisnike
 * Prikaz potpune liste događaja za goste ili registrovane korisnike 
 * Mogućnost registracije novog događaja
-* Prijava na događaj
+* mogucnost prijave na događaj od strane registrovanih korisnika
+* mogucnost ocjenjivanja agencije od strane registrovanih korisnika
+* mogucnost ostavljanja komentara od strane registrovanih korisnika
 * Modifikacija statusa događaja
 * Mogućnost uplate kod administratora
 * Agencija vrši naplatu za svoje usluge
