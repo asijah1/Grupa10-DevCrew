@@ -59,7 +59,7 @@ Ključna radnja neke turističke agencije jeste registracija događaja koji sama
 
 #### 5. Naplata usluga
 
-Svaka agencija koristi modul za naplatu svojih usluga gdje se kreira posebna forma sa stavkama za troškove i eventualne popuste. Ta forma se šalje korisniku koji aplicira za neki događaj. Nakon uspješne naplate, agencija stavlja korisnika na listu osoba koji idu na događaj, a stanje na računu korisnika se smanjuje za vrijednost prikazanoj na formi. Da bi korisnik imao pravo na popust(ako postoji za određeni događaj) potrebno je da priloži adekvatne dokumente na formi za prijavu. Takvi dokumenti su neophodni za eventualno obračunavanje popusta (potvrda da je student i tako dalje). Agencija odobrava/odbija zahtjev korisnika.
+Svaka agencija koristi modul za naplatu svojih usluga gdje se kreira posebna forma sa stavkama za troškove i eventualne popuste. Ta forma se šalje korisniku koji aplicira za neki događaj. Nakon uspješne naplate, agencija stavlja korisnika na listu osoba koji idu na događaj, te se vrši transakcija novca sa korisnikovog paypal računa na račun agencije za vrijednost prikazanoj na formi. Da bi korisnik imao pravo na popust(ako postoji za određeni događaj) potrebno je da priloži adekvatne dokumente na formi za prijavu. Takvi dokumenti su neophodni za eventualno obračunavanje popusta (potvrda da je student i tako dalje). Agencija odobrava/odbija zahtjev korisnika.
 
 #### 6. Transakcije vezane za račun korisnika
 
