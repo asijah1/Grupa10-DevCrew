@@ -63,7 +63,7 @@ Svaka agencija koristi modul za naplatu svojih usluga gdje se kreira posebna for
 
 #### 6. Transakcije vezane za račun korisnika
 
-Prije nego što se korisnik(turist) može prijaviti na događaj, potrebno je da ima novac na računu. Dakle pored transakcije novca korisnika i agencije prethodno je potrebno obaviti transakciju novca sistema i korisnika. Korisnik uplate vrši kod administratora sistema gotovinom. Administrator tada pristupa profilu korisnika i uvećava njegovo stanje na računu.
+Da bi se korisnik mogao prijaviti na događaj treba imati otvoren paypal racun(na kojem mora imati dovoljno sredstava) da bi mogao da izvrsi uplatu, a samim tim i prijavi na događaj. 
 
 ## Funkcionalnosti
 
