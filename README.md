@@ -63,7 +63,7 @@ Svaka agencija koristi modul za naplatu svojih usluga gdje se kreira posebna for
 
 #### 6. Transakcije vezane za račun korisnika
 
-Da bi se korisnik mogao prijaviti na događaj treba imati otvoren paypal racun(na kojem mora imati dovoljno sredstava) da bi mogao da izvrsi uplatu, a samim tim i prijavi na događaj. 
+Da bi se korisnik mogao prijaviti na događaj treba imati otvoren paypal racun(na kojem mora imati dovoljno sredstava) da bi mogao da izvrsi uplatu, a samim tim i prijavi na događaj. Korisniku se nudi i dodatna opcija "refund money" u slučaju da želi otkazati rezervaciju za neki događaj. U tom slučaju se novac uplaćen za događaj vraća na korisnički račun.
 
 ## Funkcionalnosti
 
