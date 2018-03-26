@@ -1,0 +1,16 @@
+mogucnost odabira lokacije sa mape
+navesti razlog otkazivanja dogaðaja
+omoguciti administratoru brisanje kako agencija tako i korisnika
+a takodje i evenata od bilo koje agencije
+a opet i ne mora
+dovoljno je samo da moze obrisati agenciju
+tj. agencije
+a agencija neka moze dodati dogaðaj
+otkazati dogaðaj
+prilikom otkazivanja dogaðaja, organizator pronalazi dogaðaj koji zeli otkazati, navodi razlog otkazivanja, a zatim otkaze ili odustane od otkazivanja
+korisnik
+.....
+nakon sto odabere zeljeni dogaðaj
+unosi broj kartice i css
+nakon cega sistem za transakciju provjerava stanje racuna i u slucaju da korisnik nema dovoljno sredstava obavjestava ga o tome,
+u suprotnom izvrsi transakciju i rezervaciju mjesta
