@@ -57,12 +57,9 @@ Korisnik(turista ili turistička agencija) uz ispravno uneseno korisničko ime(n
 
 Ključna radnja neke turističke agencije jeste registracija događaja koji sama agencija organizuje. Glavne karakteristike samog događaja jesu grad(i adresa gdje će se održati), broj mjesta za događaj, cijena za jednu osobu (mogući popusti), vrijeme i trajanje održavanja, vrsta događaja i druge pojedinosti. Obični korisnici(turisti) pri prijavi na sistem dobivaju listu događaja po željenim kriterijima. Željeni kriteriji ne moraju biti specificirani - u tom slučaju korisnik će dobiti listu svih događaja. Uz događaje postoji i sistem obavještenja za turiste o statusu događaja koji su od njihovog interesa. Ovo podrazumijeva registraciju novog događaja, prolongiranje, otkazivanje i slično.
 
-#### 5. Naplata usluga
+#### 5. Transakcija
 
 Svaka agencija koristi modul za naplatu svojih usluga gdje se kreira posebna forma sa stavkama za troškove i eventualne popuste. Ta forma se šalje korisniku koji aplicira za neki događaj. Nakon uspješne naplate, agencija stavlja korisnika na listu osoba koje idu na događaj, te se vrši transakcija novca sa korisnikovog paypal računa na račun agencije za vrijednost prikazanoj na formi. Da bi korisnik imao pravo na popust(ako postoji za određeni događaj) potrebno je da priloži adekvatne dokumente na formi za prijavu. Takvi dokumenti su neophodni za eventualno obračunavanje popusta (potvrda da je student i tako dalje). Agencija odobrava/odbija zahtjev korisnika.
-
-#### 6. Transakcije vezane za račun korisnika
-
 Da bi se korisnik mogao prijaviti na događaj treba imati otvoren paypal racun(na kojem mora imati dovoljno sredstava) da bi mogao da izvrsi uplatu, a samim tim i prijavi na događaj. Korisniku se nudi i dodatna opcija "refund money" u slučaju da želi otkazati rezervaciju za neki događaj. U tom slučaju se novac uplaćen za događaj vraća na korisnički račun.
 
 ## Funkcionalnosti
