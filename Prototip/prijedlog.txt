@@ -1,16 +1,12 @@
 mogucnost odabira lokacije sa mape
-navesti razlog otkazivanja doga�aja
-omoguciti administratoru brisanje kako agencija tako i korisnika
+navesti razlog otkazivanja događaja
+omoguciti administratoru brisanje agencija
 a takodje i evenata od bilo koje agencije
-a opet i ne mora
-dovoljno je samo da moze obrisati agenciju
-tj. agencije
-a agencija neka moze dodati doga�aj
-otkazati doga�aj
-prilikom otkazivanja doga�aja, organizator pronalazi doga�aj koji zeli otkazati, navodi razlog otkazivanja, a zatim otkaze ili odustane od otkazivanja
-korisnik
-.....
-nakon sto odabere zeljeni doga�aj
+tj. neka moze zabraniti neki događaj
+agencija neka moze dodati događaj, otkazati događaj
+prilikom otkazivanja događaja, organizator pronalazi događaj koji zeli otkazati, 
+navodi razlog otkazivanja, a zatim otkaze ili odustane od otkazivanja
+korisnik nakon sto odabere zeljeni događaj
 unosi broj kartice i css
 nakon cega sistem za transakciju provjerava stanje racuna i u slucaju da korisnik nema dovoljno sredstava obavjestava ga o tome,
 u suprotnom izvrsi transakciju i rezervaciju mjesta
