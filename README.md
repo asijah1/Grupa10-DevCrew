@@ -63,12 +63,12 @@ Svaka agencija koristi modul za naplatu svojih usluga gdje se kreira posebna for
 Da bi se korisnik mogao prijaviti na događaj treba imati otvoren paypal racun(na kojem mora imati dovoljno sredstava) da bi mogao da izvrsi uplatu, a samim tim i prijavi na događaj. Korisniku se nudi i dodatna opcija "refund money" u slučaju da želi otkazati rezervaciju za neki događaj. U tom slučaju se novac uplaćen za događaj vraća na korisnički račun.
 
 ## Funkcionalnosti
-### Gost
+#### Gost
 
 * Mogućnost registracije sa specificiranim podacima
 * Mogućnost pregleda događaja
 
-### Registrovani korisnik
+#### Registrovani korisnik
 
 * Prijava na sistem
 * Prikaz restriktivne liste događaja
@@ -78,19 +78,19 @@ Da bi se korisnik mogao prijaviti na događaj treba imati otvoren paypal racun(n
 * Mogućnost ocjenjivanja agencije
 * Mogućnost ostavljanja komentara
 
-### Agencija
+#### Agencija
 
 * Mogućnost registracije
 * Mogućnost prijave na sistem
 * Mogućnost registracije novog događaja
 * Modifikacija statusa događaja
 
-### Sistem za transakciju
+#### Sistem za transakciju
 
 * Transakcija novca sa racuna korisnika na racun agencije i obratno
 * Povrat novca u slucaju otkazivanja rezervacije
 
-### Administrator
+#### Administrator
 
 * Koordinacija sistemom
 
