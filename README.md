@@ -63,36 +63,44 @@ Svaka agencija koristi modul za naplatu svojih usluga gdje se kreira posebna for
 Da bi se korisnik mogao prijaviti na događaj treba imati otvoren paypal racun(na kojem mora imati dovoljno sredstava) da bi mogao da izvrsi uplatu, a samim tim i prijavi na događaj. Korisniku se nudi i dodatna opcija "refund money" u slučaju da želi otkazati rezervaciju za neki događaj. U tom slučaju se novac uplaćen za događaj vraća na korisnički račun.
 
 ## Funkcionalnosti
+### Gost
 
-* Mogućnost registracije korisnika sa specificiranim podacima
-* Mogućnost prijave korisnika kao gost uz pregled događaja
-* Mogućnost registracije agencije 
-* Prijave korisnika sistema
-* Prikaz restriktivne liste događaja za registrovane korisnike
-* Prikaz potpune liste događaja za goste ili registrovane korisnike 
-* Mogućnost registracije novog događaja
-* Mogućnost prijave na događaj od strane registrovanih korisnika
+* Mogućnost registracije sa specificiranim podacima
+* Mogućnost pregleda događaja
+
+### Registrovani korisnik
+
+* Prijava na sistem
+* Prikaz restriktivne liste događaja
+* Prikaz potpune liste događaja
+* Mogućnost prijave na događaj
 * Mogućnost otkazivanja rezervacije
-* Povrat novca u slucaju otkazivanja rezervacije
-* Mogućnost ocjenjivanja agencije od strane registrovanih korisnika
-* Mogućnost ostavljanja komentara od strane registrovanih korisnika
+* Mogućnost ocjenjivanja agencije
+* Mogućnost ostavljanja komentara
+
+### Agencija
+
+* Mogućnost registracije
+* Mogućnost prijave na sistem
+* Mogućnost registracije novog događaja
 * Modifikacija statusa događaja
-* Agencija vrši naplatu za svoje usluge
-* Pravo na popust
+
+### Sistem za transakciju
+
+* Transakcija novca sa racuna korisnika na racun agencije i obratno
+* Povrat novca u slucaju otkazivanja rezervacije
+
+### Administrator
+
+* Koordinacija sistemom
 
 ## Akteri
 
-1. **Registrovani korisnik** - akter koji unosi svoje podatke, te se prijavljuje na željene događaje. Posjeduje svoje stanje na računu pomoću kojeg se vrši transakcija novca između korisnika i agencije
+1. **Registrovani korisnik** - akter koji unosi svoje podatke, te se prijavljuje na željene događaje
 2. **Gost korisnik** - akter koji ima uvid u cijelu listu događaja, ali bez mogućnosti prijave na događaje
-3. **Turistička agencija** - unosi svoje podatke, registruje nove događaje te modifikuje postojeće.
-4. **Administrator** - koordinira i nadgleda rad sistema, verifikuje zahtjeve za registraciju agencija i koordinira stanjem na računu registrovanog korisnika i agencije
-5. **Sistem za autorizaciju kartica** - akter zaduzen za naplatu 
-
-
-
-
-
-
+3. **Turistička agencija** - unosi svoje podatke, registruje nove događaje te modifikuje postojeće
+4. **Administrator** - koordinira i nadgleda rad sistema, verifikuje zahtjeve za registraciju agencija
+5. **Sistem za transakciju** - akter zaduzen za transakcije 
 
 
 
