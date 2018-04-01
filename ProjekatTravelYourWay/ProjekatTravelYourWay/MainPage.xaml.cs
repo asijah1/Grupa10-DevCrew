@@ -26,5 +26,61 @@ namespace ProjekatTravelYourWay
         {
             this.InitializeComponent();
         }
+
+
+
+        private void Korisnik_PointerMoved(object sender, PointerRoutedEventArgs e)
+        {
+            Korisnik.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 132, 11, 255));
+            Korisnik.Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 250, 240));
+        }
+
+        private void Agencija_PointerMoved(object sender, PointerRoutedEventArgs e)
+        {
+            Agencija.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 30, 144, 255));
+            Agencija.Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 250, 240));
+        }
+
+        private void Gost_PointerMoved(object sender, PointerRoutedEventArgs e)
+        {
+            Gost.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 240, 128, 128));
+            Gost.Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 250, 240));
+        }
+
+        private void ONama_PointerMoved(object sender, PointerRoutedEventArgs e)
+        {
+            ONama.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 218, 165, 32));
+            ONama.Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0,0,0));
+        }
+
+        private void Korisnik_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Korisnik.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 106, 90, 205));
+            Korisnik.Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 250, 240));
+        }
+
+        private void Agencija_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Agencija.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 205));
+            Agencija.Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 250, 240));
+        }
+
+        private void Gost_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Gost.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 220, 20, 60));
+            Gost.Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 250, 240));
+        }
+
+
+        private void ONama_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            ONama.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 215, 0));
+            ONama.Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
+        }
+
+
+
+
+
     }
 }
