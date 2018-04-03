@@ -104,5 +104,10 @@ namespace ProjekatTravelYourWay
         {
             nav.Navigate(typeof(Forme.MeniGost));
         }
+
+        private void Agencija_Click(object sender, RoutedEventArgs e)
+        {
+            nav.Navigate(typeof(Forme.PrijavaAgencija));
+        }
     }
 }

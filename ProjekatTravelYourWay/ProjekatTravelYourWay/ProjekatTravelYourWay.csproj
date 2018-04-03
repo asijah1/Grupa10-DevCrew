@@ -98,6 +98,9 @@
     <Compile Include="Forme\MeniGost.xaml.cs">
       <DependentUpon>MeniGost.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forme\PrijavaAgencija.xaml.cs">
+      <DependentUpon>PrijavaAgencija.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forme\PrijavaKorisnik.xaml.cs">
       <DependentUpon>PrijavaKorisnik.xaml</DependentUpon>
     </Compile>
@@ -131,6 +134,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Forme\MeniGost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forme\PrijavaAgencija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
