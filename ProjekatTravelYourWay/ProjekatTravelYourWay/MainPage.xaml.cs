@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Core;
+using ProjekatTravelYourWay.Helper;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -22,6 +24,8 @@ namespace ProjekatTravelYourWay
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public INavigationService nav { get; set; }
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -78,9 +82,14 @@ namespace ProjekatTravelYourWay
             ONama.Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
         }
 
+        private void Korisnik_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Forme.PrijavaKorisnik));
+        }
 
-
-
-
+        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            nav.GoBack();
+        }
     }
 }
