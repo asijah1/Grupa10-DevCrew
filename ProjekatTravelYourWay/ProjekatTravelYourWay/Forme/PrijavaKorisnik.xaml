@@ -71,7 +71,7 @@
             <TextBox PlaceholderText="Korisnicko ime" Name="KorisnickoIme" FontSize="32" Margin="20,20,20,20" HorizontalAlignment="Center" Width="300" />
             <TextBox PlaceholderText="Sifra" Name="Sifra" FontSize="32"  Margin="20,20,20,20" HorizontalAlignment="Center" Width="300" />
             <HyperlinkButton Content="Zaboravljena šifra?" Name="ZaboravljenaSifra" FontSize="24" HorizontalAlignment="Center"  Margin="20,20,20,20" />
-            <Button Name="Prijava"  Content="Pijava" FontSize="36"  Margin="20,20,20,20" HorizontalAlignment="Center" IsEnabled="True" Width="300" />
+            <Button Name="Prijava"  Content="Prijava" FontSize="36"  Margin="20,20,20,20" HorizontalAlignment="Center" IsEnabled="True" Width="300" />
 
         </StackPanel>
 

@@ -29,6 +29,14 @@ namespace ProjekatTravelYourWay
         public MainPage()
         {
             this.InitializeComponent();
+            App.splitViewFrame = MainFrame;
+
+            var currentView = SystemNavigationManager.GetForCurrentView();
+
+            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
+
+            nav = new NavigationService();
         }
 
 
@@ -84,12 +92,17 @@ namespace ProjekatTravelYourWay
 
         private void Korisnik_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Forme.PrijavaKorisnik));
+            nav.Navigate(typeof(Forme.PrijavaKorisnik));
         }
 
         private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
         {
             nav.GoBack();
+        }
+
+        private void Gost_Click(object sender, RoutedEventArgs e)
+        {
+            nav.Navigate(typeof(Forme.MeniGost));
         }
     }
 }

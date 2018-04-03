@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Frame Name="MainFrame">
     <Grid x:Name="StartGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <VisualStateManager.VisualStateGroups>
@@ -123,9 +123,10 @@
 
             <Button Name="Korisnik" Content="KORISNIK" Height="400" Width="470" Margin="20,20,20,20" Background="SlateBlue"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Korisnik_PointerMoved" PointerExited="Korisnik_PointerExited" Click="Korisnik_Click" />
             <Button Name="Agencija" Content="AGENCIJA" Height="400" Width="470" Margin="20,20,20,20" Background="MediumBlue"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Agencija_PointerMoved" PointerExited="Agencija_PointerExited" />
-            <Button Name="Gost" Content="GOST" Height="400" Width="470" Margin="20,20,20,20" Background="Crimson"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Gost_PointerMoved" PointerExited="Gost_PointerExited" />
+            <Button Name="Gost" Content="GOST" Height="400" Width="470" Margin="20,20,20,20" Background="Crimson"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Gost_PointerMoved" PointerExited="Gost_PointerExited" Click="Gost_Click" />
             
         </Grid>
         </ScrollViewer>
     </Grid>
+    </Frame>
 </Page>
