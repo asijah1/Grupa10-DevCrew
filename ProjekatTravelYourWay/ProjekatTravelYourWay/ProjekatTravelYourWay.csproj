@@ -104,6 +104,9 @@
     <Compile Include="Forme\PrijavaKorisnik.xaml.cs">
       <DependentUpon>PrijavaKorisnik.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forme\RegistracijaAgencija.xaml.cs">
+      <DependentUpon>RegistracijaAgencija.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helper\NavigationService.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -142,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forme\PrijavaKorisnik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forme\RegistracijaAgencija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

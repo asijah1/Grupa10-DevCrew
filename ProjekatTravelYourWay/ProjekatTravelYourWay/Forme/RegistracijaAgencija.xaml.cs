@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Windows.UI.Core;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -21,22 +20,11 @@ namespace ProjekatTravelYourWay.Forme
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class PrijavaAgencija : Page
+    public sealed partial class RegistracijaAgencija : Page
     {
-        public PrijavaAgencija()
+        public RegistracijaAgencija()
         {
             this.InitializeComponent();
-        }
-
-        private void RegistracijaAgencije_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Forme.RegistracijaAgencija));
-        }
-
-        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
-        {
-            if (this.Frame.CanGoBack)
-                this.Frame.GoBack();
         }
     }
 }

@@ -92,22 +92,23 @@ namespace ProjekatTravelYourWay
 
         private void Korisnik_Click(object sender, RoutedEventArgs e)
         {
-            nav.Navigate(typeof(Forme.PrijavaKorisnik));
+            this.Frame.Navigate(typeof(Forme.PrijavaKorisnik));
         }
 
         private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
         {
-            nav.GoBack();
+            if(this.Frame.CanGoBack)
+                this.Frame.GoBack();
         }
 
         private void Gost_Click(object sender, RoutedEventArgs e)
         {
-            nav.Navigate(typeof(Forme.MeniGost));
+            this.Frame.Navigate(typeof(Forme.MeniGost));
         }
 
         private void Agencija_Click(object sender, RoutedEventArgs e)
         {
-            nav.Navigate(typeof(Forme.PrijavaAgencija));
+            this.Frame.Navigate(typeof(Forme.PrijavaAgencija));
         }
     }
 }
