@@ -20,18 +20,11 @@ namespace ProjekatTravelYourWay.Forme
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class PrijavaKorisnik : Page
+    public sealed partial class Administrator : Page
     {
-        public PrijavaKorisnik()
+        public Administrator()
         {
             this.InitializeComponent();
-        }
-
-        private void Prijava_Click(object sender, RoutedEventArgs e)
-        {
-            if(KorisnickoIme.Text == "admin" && Sifra.Password.ToString() == "123")
-                this.Frame.Navigate(typeof(Forme.Administrator));
-
         }
     }
 }
