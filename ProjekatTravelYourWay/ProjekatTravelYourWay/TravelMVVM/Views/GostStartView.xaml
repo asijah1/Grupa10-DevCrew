@@ -5,7 +5,13 @@
     xmlns:local="using:ProjekatTravelYourWay.TravelMVVM.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converter="using:ProjekatTravelYourWay.TravelMVVM.Helper"
     mc:Ignorable="d">
+
+    <Page.Resources>
+        <!--converter namespace definiran u Page-->
+        <converter:DateConverter x:Key="theDateConverter"/>
+    </Page.Resources>
 
     <Grid>
 
@@ -61,33 +67,40 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
 
 
 
-                        <TextBlock Text="Ime: " Margin="0,0,20,20" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" />
-                        <TextBox Name="tIme" Height="30" Width="300" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" />
+                        <TextBlock Width="Auto" Text="Ime: " Margin="0,0,20,20" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" />
+                        <TextBox Name="tIme" Height="30" Width="Auto" HorizontalContentAlignment="Stretch" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" Text="{Binding Path=Korisnik.Ime, Mode=TwoWay}" />
+                        <TextBlock  Margin="5,5,5,5"  Text="{Binding Korisnik.Errors[Ime][0]}" Foreground="Red" Height="auto" Grid.Column="2" />
 
-                        <TextBlock Text="Prezime: " Margin="0,0,20,20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" />
-                        <TextBox Name="tPrezime" Height="30" Width="300" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" />
+                        <TextBlock Width="Auto" Text="Prezime: " Margin="0,0,20,20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" />
+                        <TextBox Name="tPrezime" Height="30" Width="Auto" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" Text="{Binding Path=Korisnik.Prezime, Mode=TwoWay}" />
+                        <TextBlock  Margin="5,5,5,5"  Text="{Binding Korisnik.Errors[Prezime][0]}" Foreground="Red" Height="auto" Grid.Column="2" Grid.Row="1" />
 
-                        <TextBlock Text="Datum rodjenja: " Margin="0,0,20,20" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" />
-                        <DatePicker Name="dDatumRodjenja" Height="35" Width="300" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" />
+                        <TextBlock Width="Auto" Text="Datum rodjenja: " Margin="0,0,20,20" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" />
+                        <DatePicker Name="dDatumRodjenja" Width="Auto" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" Date="{Binding Path=Korisnik.DatumRodjenja, Mode=TwoWay, Converter={StaticResource theDateConverter}}" />
+                        <TextBlock  Margin="5,5,5,5"  Text="{Binding Korisnik.Errors[DatumRodjenja][0]}" Foreground="Red" Height="auto" Grid.Column="2" Grid.Row="2"  />
 
-                        <TextBlock Text="Drzava: " Margin="0,0,20,20" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" />
-                        <TextBox Name="tDrzava" Height="30" Width="300" Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" />
+                        <TextBlock Width="Auto" Text="Drzava: " Margin="0,0,20,20" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" />
+                        <TextBox Name="tDrzava" Height="30" Width="Auto" Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" Text="{Binding Path=Korisnik.Drzava, Mode=TwoWay}" />
+                        <TextBlock  Margin="5,5,5,5"  Text="{Binding Korisnik.Errors[Drzava][0]}" Foreground="Red" Height="auto" Grid.Column="2" Grid.Row="3"  />
 
-                        <TextBlock Text="E-mail: " Margin="0,0,20,20" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" />
-                        <TextBox Name="tEmail" Height="30" Width="300" Grid.Row="4" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" />
+                        <TextBlock Width="Auto" Text="E-mail: " Margin="0,0,20,20" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" />
+                        <TextBox Name="tEmail" Height="30" Width="Auto" Grid.Row="4" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" Text="{Binding Path=Korisnik.Email, Mode=TwoWay}" />
+                        <TextBlock  Margin="5,5,5,5"  Text="{Binding Korisnik.Errors[Email][0]}" Foreground="Red" Height="auto" Grid.Column="2" Grid.Row="4"  />
 
-                        <TextBlock Text="Korisničko ime: " Margin="0,0,20,20" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" />
-                        <TextBox Name="tKorisnickoIme" Height="30" Width="300" Grid.Row="5" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" />
+                        <TextBlock Width="Auto" Text="Korisničko ime: " Margin="0,0,20,20" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" />
+                        <TextBox Name="tKorisnickoIme" Height="30" Width="Auto" Grid.Row="5" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" Text="{Binding Path=Korisnik.KorisnickoIme, Mode=TwoWay}" />
+                        <TextBlock  Margin="5,5,5,5"  Text="{Binding Korisnik.Errors[KorisnickoIme][0]}" Foreground="Red" Height="auto" Grid.Column="2" Grid.Row="5"  />
 
-                        <TextBlock Text="Šifra: " Margin="0,0,20,20" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" />
-                        <PasswordBox Name="tSifra" Height="30" Width="300" Grid.Row="6" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" />
+                        <TextBlock Width="Auto" Text="Šifra: " Margin="0,0,20,20" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" />
+                        <PasswordBox Name="tSifra" Height="30" Width="Auto" Grid.Row="6" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" Password="{Binding Path=Korisnik.Sifra, Mode=TwoWay}" />
+                        <TextBlock  Margin="5,5,5,5"  Text="{Binding Korisnik.Errors[Sifra][0]}" Foreground="Red" Height="auto" Grid.Column="2" Grid.Row="6"  />
 
-
-                        <Button Content="Registruj se" Name="bRegistracija" Width="200" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="1" Margin="0,0,20,20"/>
+                        <Button Content="Registruj se" Name="bRegistracija" Width="Auto" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="1" Margin="0,0,20,20" Command="{Binding Path=Registracija}" />
 
                     </Grid>
                 </ScrollViewer>

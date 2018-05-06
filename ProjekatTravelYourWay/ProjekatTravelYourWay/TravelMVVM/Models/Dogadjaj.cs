@@ -9,7 +9,7 @@ using ProjekatTravelYourWay.TravelMVVM.Helper;
 
 namespace ProjekatTravelYourWay.TravelMVVM.Models
 {
-    class Dogadjaj : ValidatableBindableBase
+    public class Dogadjaj : ValidatableBindableBase
     {
         private static int ID = 1;
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjekatTravelYourWay.TravelMVVM.Models
 {
-    class Administrator : Osoba
+    public class Administrator : Osoba
     {
 
         public void obrisiKorisnika(Korisnik k)

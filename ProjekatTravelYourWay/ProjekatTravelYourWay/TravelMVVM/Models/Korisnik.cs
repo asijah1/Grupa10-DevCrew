@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace ProjekatTravelYourWay.TravelMVVM.Models
 {
-    class Korisnik : Osoba
+    public class Korisnik : Osoba
     {
+        public Korisnik(string ime, string prezime, DateTime datumRodjenja, string drzava, string email, string korisnickoIme, string sifra) : base(ime, prezime, datumRodjenja, drzava, email, korisnickoIme, sifra)
+        {
+        }
+
+        public Korisnik()
+        {
+
+        }
 
         public void prijaviDogadjaj()
         {

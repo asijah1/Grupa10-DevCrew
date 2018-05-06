@@ -5,9 +5,59 @@
     xmlns:local="using:ProjekatTravelYourWay.TravelMVVM.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converter="using:ProjekatTravelYourWay.TravelMVVM.Helper"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <!--converter namespace definiran u Page-->
+        <converter:DateConverter x:Key="theDateConverter"/>
+    </Page.Resources>
 
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        
+        <Grid Margin="20,20,20,20">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+
+
+            <TextBlock Text="Naziv agencije: " Margin="0,0,20,20" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" />
+            <TextBox Name="tNazivAgencije" MinWidth="150" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" HorizontalAlignment="Left" Text="{Binding Path=Agencija.Naziv, Mode=TwoWay}" />
+            <TextBlock  Margin="5,5,5,5"  Text="{Binding Agencija.Errors[Naziv][0]}" Foreground="Red" Grid.Column="2" />
+
+            <TextBlock Text="Datum osnivanja: " Margin="0,0,20,20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" />
+            <DatePicker Name="tDatumOsnivanja" MinWidth="150" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,20,20" Date="{Binding Path=Agencija.DatumOsnivanja, Mode=TwoWay, Converter={StaticResource theDateConverter}}" />
+            <TextBlock  Margin="5,5,5,5"  Text="{Binding Agencija.Errors[DatumOsnivanja][0]}" Foreground="Red" Grid.Column="2" Grid.Row="1" />
+
+            <TextBlock Text="Sjedište: " Margin="0,0,20,20" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" />
+            <TextBox Name="tSjediste" MinWidth="150" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" HorizontalAlignment="Left" Text="{Binding Path=Agencija.Sjediste, Mode=TwoWay}" />
+            <TextBlock  Margin="5,5,5,5"  Text="{Binding Agencija.Errors[Sjediste][0]}" Foreground="Red" Grid.Column="2" Grid.Row="2" />
+
+            <TextBlock Text="E-mail: " Margin="0,0,20,20" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" />
+            <TextBox Name="tEmail" MinWidth="150" Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" HorizontalAlignment="Left" Text="{Binding Path=Agencija.Email, Mode=TwoWay}" />
+            <TextBlock  Margin="5,5,5,5"  Text="{Binding Agencija.Errors[Email][0]}" Foreground="Red" Grid.Column="2" Grid.Row="3" />
+
+            <TextBlock Text="Šifra: " Margin="0,0,20,20" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" />
+            <PasswordBox Name="tSifra" MinWidth="150" Grid.Row="4" Grid.Column="1" VerticalAlignment="Top" Margin="0,0,20,20" HorizontalAlignment="Left" Password="{Binding Path=Agencija.Sifra, Mode=TwoWay}" />
+            <TextBlock  Margin="5,5,5,5"  Text="{Binding Agencija.Errors[Sifra][0]}" Foreground="Red" Grid.Column="2" Grid.Row="4" />
+
+            <Button Content="Registruj agenciju" MinWidth="150" Name="bRegistracijaAgencije" HorizontalAlignment="Left" Grid.Row="7" Grid.Column="1" Margin="0,0,20,20" Command="{Binding Path=RegistracijaAgencije}" />
+
+        </Grid>
+
+    </ScrollViewer>
+
 </Page>

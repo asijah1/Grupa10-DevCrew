@@ -116,6 +116,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TravelMVVM\Helper\AfterTodayProperty.cs" />
+    <Compile Include="TravelMVVM\Helper\DateConverter.cs" />
     <Compile Include="TravelMVVM\Helper\INavigationService.cs" />
     <Compile Include="TravelMVVM\Helper\BeforeTodayPropertyAttribute.cs" />
     <Compile Include="TravelMVVM\Helper\NavigationService.cs" />
@@ -128,11 +129,15 @@
     <Compile Include="TravelMVVM\Models\Korisnik.cs" />
     <Compile Include="TravelMVVM\Models\Osoba.cs" />
     <Compile Include="TravelMVVM\Models\TravelYourWay.cs" />
+    <Compile Include="TravelMVVM\ViewModels\AdministratorStartViewModel.cs" />
     <Compile Include="TravelMVVM\ViewModels\AgencijaRegistracijaViewModel.cs" />
     <Compile Include="TravelMVVM\ViewModels\AgencijaStartViewModel.cs" />
     <Compile Include="TravelMVVM\ViewModels\GostStartViewModel.cs" />
     <Compile Include="TravelMVVM\ViewModels\KorisnikStartViewModel.cs" />
     <Compile Include="TravelMVVM\ViewModels\PocetakViewModel.cs" />
+    <Compile Include="TravelMVVM\Views\AdministratorStartView.xaml.cs">
+      <DependentUpon>AdministratorStartView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TravelMVVM\Views\AgencijaRegistracijaView.xaml.cs">
       <DependentUpon>AgencijaRegistracijaView.xaml</DependentUpon>
     </Compile>
@@ -166,6 +171,7 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Resources\Naslovna.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -195,6 +201,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TravelMVVM\Views\AdministratorStartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TravelMVVM\Views\AgencijaRegistracijaView.xaml">
       <SubType>Designer</SubType>

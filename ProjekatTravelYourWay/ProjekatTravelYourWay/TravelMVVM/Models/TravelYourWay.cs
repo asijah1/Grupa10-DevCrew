@@ -6,51 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjekatTravelYourWay.TravelMVVM.Models
 {
-    class TravelYourWay
+    public static class TravelYourWay
     {
-        private List<Agencija> agencije;
-        private List<Korisnik> korisnici;
-        private List<Dogadjaj> dogadjaji;
-
-        public List<Agencija> Agencije
-        {
-            get
-            {
-                return agencije;
-            }
-
-            set
-            {
-                agencije = value;
-            }
-        }
-
-        public List<Korisnik> Korisnici
-        {
-            get
-            {
-                return korisnici;
-            }
-
-            set
-            {
-                korisnici = value;
-            }
-        }
-
-        public List<Dogadjaj> Dogadjaji
-        {
-            get
-            {
-                return dogadjaji;
-            }
-
-            set
-            {
-                dogadjaji = value;
-            }
-        }
-
+        public static List<Agencija> agencije = new List<Agencija>();
+        public static List<Korisnik> korisnici = new List<Korisnik>();
+        public static List<Dogadjaj> dogadjaji = new List<Dogadjaj>();
+        public static List<Agencija> zahtjeviAgencija = new List<Agencija>();
 
     }
 }

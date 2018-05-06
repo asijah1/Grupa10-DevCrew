@@ -9,8 +9,25 @@ using ProjekatTravelYourWay.TravelMVVM.Helper;
 
 namespace ProjekatTravelYourWay.TravelMVVM.Models
 {
-    class Osoba : ValidatableBindableBase
+    public class Osoba : ValidatableBindableBase
     {
+
+        public Osoba(string ime, string prezime, DateTime datumRodjenja, string drzava, string email, string korisnickoIme, string sifra)
+        {
+            Ime = ime;
+            Prezime = prezime;
+            DatumRodjenja = datumRodjenja;
+            Drzava = drzava;
+            Email = email;
+            KorisnickoIme = korisnickoIme;
+            Sifra = sifra;
+        }
+
+        public Osoba()
+        {
+
+        }
+
         private string ime;
         //required polje validacija, potreban je SetProperty
         [Required(ErrorMessage = "Niste unijeli svoje ime")]

@@ -18,12 +18,10 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
         public string sifra { get; set; }
         public ICommand Prijava { get; set; }
         public ICommand Registracija { get; set; }
-        public INavigationService NavigationService { get; set; }
 
 
         public AgencijaStartViewModel(PocetakViewModel parent)
         {
-            NavigationService = new NavigationService();
             this.Parent = parent;
             Prijava = new RelayCommand<object>(prijava);
             Registracija = new RelayCommand<object>(registracija);
@@ -50,7 +48,7 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
 
         public void registracija(object parametar)
         {
-            NavigationService.Navigate(typeof(AgencijaRegistracijaView), new AgencijaRegistracijaViewModel(this));
+            Parent.NavigationService.Navigate(typeof(AgencijaRegistracijaView), new AgencijaRegistracijaViewModel(this));
         }
 
 

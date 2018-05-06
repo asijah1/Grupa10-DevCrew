@@ -7,7 +7,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Frame Name="MainFrame">
-    <Grid x:Name="StartGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
@@ -101,32 +100,31 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         <ScrollViewer Grid.Row="1">
-        <Grid x:Name="LayoutGrid" Background="#080808" >
+            <Grid x:Name="LayoutGrid" Background="#080808" >
 
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <!--<TextBlock Name="Text" Text="Planiraj. Opusti se." Grid.Row="1" Grid.Column="1" FontSize="36"/>-->
-            <Image Source="Assets/Naslovna.png" Grid.Row="0" Grid.Column="1" Margin="15" Stretch="UniformToFill" />
+                <!--<TextBlock Name="Text" Text="Planiraj. Opusti se." Grid.Row="1" Grid.Column="1" FontSize="36"/>-->
+                <Image Source="Assets/Naslovna.png" Grid.Row="0" Grid.Column="1" Margin="15" Stretch="UniformToFill" />
 
-            <Button Content="O NAMA" Name="ONama" Background="Gold" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="80" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" PointerMoved="ONama_PointerMoved" PointerExited="ONama_PointerExited" />
+                <Button Content="O NAMA" Name="ONama" Background="Gold" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="80" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" PointerMoved="ONama_PointerMoved" PointerExited="ONama_PointerExited" />
 
-            <Button Name="Korisnik" Content="KORISNIK" Height="400" Width="470" Margin="20,20,20,20" Background="SlateBlue"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Korisnik_PointerMoved" PointerExited="Korisnik_PointerExited" Click="Korisnik_Click" />
-            <Button Name="Agencija" Content="AGENCIJA" Height="400" Width="470" Margin="20,20,20,20" Background="MediumBlue"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Agencija_PointerMoved" PointerExited="Agencija_PointerExited" Click="Agencija_Click"/>
-            <Button Name="Gost" Content="GOST" Height="400" Width="470" Margin="20,20,20,20" Background="Crimson"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Gost_PointerMoved" PointerExited="Gost_PointerExited" Click="Gost_Click" />
-            
-        </Grid>
+                <Button Name="Korisnik" Content="KORISNIK" Height="400" Width="470" Margin="20,20,20,20" Background="SlateBlue"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Korisnik_PointerMoved" PointerExited="Korisnik_PointerExited" Click="Korisnik_Click" />
+                <Button Name="Agencija" Content="AGENCIJA" Height="400" Width="470" Margin="20,20,20,20" Background="MediumBlue"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Agencija_PointerMoved" PointerExited="Agencija_PointerExited" Click="Agencija_Click"/>
+                <Button Name="Gost" Content="GOST" Height="400" Width="470" Margin="20,20,20,20" Background="Crimson"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Gost_PointerMoved" PointerExited="Gost_PointerExited" Click="Gost_Click" />
+
+            </Grid>
         </ScrollViewer>
-    </Grid>
     </Frame>
 </Page>

@@ -13,8 +13,17 @@ using ProjekatTravelYourWay.TravelMVVM.Helper;
 
 namespace ProjekatTravelYourWay.TravelMVVM.Models
 {
-    class Agencija : ValidatableBindableBase
+    public class Agencija : ValidatableBindableBase
     {
+
+        public Agencija()
+        {
+            naziv = "";
+            datumOsnivanja = DateTime.Now;
+            sjediste = "";
+            email = "";
+            sifra = "";
+        }
 
         private string naziv;
         //required polje validacija, potreban je SetProperty

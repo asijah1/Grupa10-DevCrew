@@ -7,38 +7,47 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <VisualStateManager.VisualStateGroups>
-        <VisualStateGroup x:Name="VisualStateGroup">
+    <Grid>
 
-            <VisualState x:Name="VisualStatePhone">
-                <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowWidth="0"/>
-                </VisualState.StateTriggers>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
 
-                <VisualState.Setters>
+                <VisualState x:Name="VisualStatePhone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
 
-                    <Setter Target="Korisnik.(FontSize)" Value="18" />
-                    <Setter Target="Agencija.(FontSize)" Value="18" />
-                    <Setter Target="Gost.(FontSize)" Value="18" />
+                    <VisualState.Setters>
+
+                        <Setter Target="Korisnik.(FontSize)" Value="18" />
+                        <Setter Target="Agencija.(FontSize)" Value="18" />
+                        <Setter Target="Gost.(FontSize)" Value="18" />
+
+                        <Setter Target="Korisnik.(Height)" Value="100" />
+                        <Setter Target="Agencija.(Height)" Value="100" />
+                        <Setter Target="Gost.(Height)" Value="100" />
+
+                        <Setter Target="Korisnik.(Width)" Value="250" />
+                        <Setter Target="Agencija.(Width)" Value="250" />
+                        <Setter Target="Gost.(Width)" Value="250" />
+
+                        <Setter Target="Korisnik.(Grid.Row)" Value="1" />
+                        <Setter Target="Korisnik.(Grid.Column)" Value="0" />
+                        <Setter Target="Agencija.(Grid.Row)" Value="2" />
+                        <Setter Target="Agencija.(Grid.Column)" Value="0" />
+                        <Setter Target="Gost.(Grid.Row)" Value="3" />
+                        <Setter Target="Gost.(Grid.Column)" Value="0" />
 
 
-                    <Setter Target="Korisnik.(Grid.Row)" Value="1" />
-                    <Setter Target="Korisnik.(Grid.Column)" Value="0" />
-                    <Setter Target="Agencija.(Grid.Row)" Value="2" />
-                    <Setter Target="Agencija.(Grid.Column)" Value="0" />
-                    <Setter Target="Gost.(Grid.Row)" Value="3" />
-                    <Setter Target="Gost.(Grid.Column)" Value="0" />
+                        <Setter Target="Korisnik.(Grid.ColumnSpan)" Value="3" />
+                        <Setter Target="Agencija.(Grid.ColumnSpan)" Value="3" />
+                        <Setter Target="Gost.(Grid.ColumnSpan)" Value="3" />
 
+                        <Setter Target="Korisnik.(Grid.RowSpan)" Value="1" />
+                        <Setter Target="Agencija.(Grid.RowSpan)" Value="1" />
+                        <Setter Target="Gost.(Grid.RowSpan)" Value="1" />
 
-                    <Setter Target="Korisnik.(Grid.ColumnSpan)" Value="3" />
-                    <Setter Target="Agencija.(Grid.ColumnSpan)" Value="3" />
-                    <Setter Target="Gost.(Grid.ColumnSpan)" Value="3" />
-
-                    <Setter Target="Korisnik.(Grid.RowSpan)" Value="1" />
-                    <Setter Target="Agencija.(Grid.RowSpan)" Value="1" />
-                    <Setter Target="Gost.(Grid.RowSpan)" Value="1" />
-
-                    <!--
+                        <!--
                         <Setter Target="Korisnik.(Width)" Value="300" />
                         <Setter Target="Korisnik.(Height)" Value="150" />
 
@@ -50,79 +59,83 @@
 
 
 
-                </VisualState.Setters>
-            </VisualState>
+                    </VisualState.Setters>
+                </VisualState>
 
-            <VisualState x:Name="VisualStateTablet">
-                <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowWidth="600"/>
-                </VisualState.StateTriggers>
+                <VisualState x:Name="VisualStateTablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700"/>
+                    </VisualState.StateTriggers>
 
-                <VisualState.Setters>
+                    <VisualState.Setters>
 
-                    <Setter Target="Korisnik.(FontSize)" Value="36" />
-                    <Setter Target="Agencija.(FontSize)" Value="36" />
-                    <Setter Target="Gost.(FontSize)" Value="36" />
+                        <Setter Target="Korisnik.(FontSize)" Value="36" />
+                        <Setter Target="Agencija.(FontSize)" Value="36" />
+                        <Setter Target="Gost.(FontSize)" Value="36" />
 
-                </VisualState.Setters>
-            </VisualState>
+                    </VisualState.Setters>
+                </VisualState>
 
-            <VisualState x:Name="VisualStateDesktop">
-                <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowWidth="1024"/>
-                </VisualState.StateTriggers>
+                <VisualState x:Name="VisualStateDesktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
 
-                <VisualState.Setters>
+                    <VisualState.Setters>
 
-                    <Setter Target="Korisnik.(FontSize)" Value="72" />
-                    <Setter Target="Agencija.(FontSize)" Value="72" />
-                    <Setter Target="Gost.(FontSize)" Value="72" />
+                        <Setter Target="Korisnik.(FontSize)" Value="72" />
+                        <Setter Target="Agencija.(FontSize)" Value="72" />
+                        <Setter Target="Gost.(FontSize)" Value="72" />
 
-                    <Setter Target="Korisnik.(Grid.Row)" Value="1" />
-                    <Setter Target="Korisnik.(Grid.Column)" Value="0" />
-                    <Setter Target="Agencija.(Grid.Row)" Value="1" />
-                    <Setter Target="Agencija.(Grid.Column)" Value="1" />
-                    <Setter Target="Gost.(Grid.Row)" Value="1" />
-                    <Setter Target="Gost.(Grid.Column)" Value="2" />
+                        <Setter Target="Korisnik.(Grid.Row)" Value="1" />
+                        <Setter Target="Korisnik.(Grid.Column)" Value="0" />
+                        <Setter Target="Agencija.(Grid.Row)" Value="1" />
+                        <Setter Target="Agencija.(Grid.Column)" Value="1" />
+                        <Setter Target="Gost.(Grid.Row)" Value="1" />
+                        <Setter Target="Gost.(Grid.Column)" Value="2" />
 
-                    <Setter Target="Korisnik.(Grid.ColumnSpan)" Value="1" />
-                    <Setter Target="Agencija.(Grid.ColumnSpan)" Value="1" />
-                    <Setter Target="Gost.(Grid.ColumnSpan)" Value="1" />
+                        <Setter Target="Korisnik.(Grid.ColumnSpan)" Value="1" />
+                        <Setter Target="Agencija.(Grid.ColumnSpan)" Value="1" />
+                        <Setter Target="Gost.(Grid.ColumnSpan)" Value="1" />
 
-                    <Setter Target="Korisnik.(Grid.RowSpan)" Value="2" />
-                    <Setter Target="Agencija.(Grid.RowSpan)" Value="2" />
-                    <Setter Target="Gost.(Grid.RowSpan)" Value="2" />
+                        <Setter Target="Korisnik.(Grid.RowSpan)" Value="2" />
+                        <Setter Target="Agencija.(Grid.RowSpan)" Value="2" />
+                        <Setter Target="Gost.(Grid.RowSpan)" Value="2" />
 
-                </VisualState.Setters>
-            </VisualState>
+                    </VisualState.Setters>
+                </VisualState>
 
-        </VisualStateGroup>
-    </VisualStateManager.VisualStateGroups>
-    <ScrollViewer Grid.Row="1">
-        <Grid x:Name="LayoutGrid" Background="#080808" >
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <Grid x:Name="LayoutGrid" Background="#080808" >
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
 
-            <!--<TextBlock Name="Text" Text="Planiraj. Opusti se." Grid.Row="1" Grid.Column="1" FontSize="36"/>-->
-            <Image Source="Assets/Naslovna.png" Grid.Row="0" Grid.Column="1" Margin="15" Stretch="UniformToFill" />
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Button Content="O NAMA" Name="ONama" Background="Gold" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="80" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" PointerMoved="ONama_PointerMoved" PointerExited="ONama_PointerExited" />
+                <!--<TextBlock Name="Text" Text="Planiraj. Opusti se." Grid.Row="1" Grid.Column="1" FontSize="36"/>-->
+                <Image Source="ms-appx:///Assets/Naslovna.png" Grid.Row="0" Grid.Column="1" Margin="15" Stretch="UniformToFill" />
 
-            <Button Name="Korisnik" Content="KORISNIK" Height="400" Width="470" Margin="20,20,20,20" Background="SlateBlue"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Korisnik_PointerMoved" PointerExited="Korisnik_PointerExited" Command="{Binding Path=Korisnik}" />
-            <Button Name="Agencija" Content="AGENCIJA" Height="400" Width="470" Margin="20,20,20,20" Background="MediumBlue"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Agencija_PointerMoved" PointerExited="Agencija_PointerExited" Command="{Binding Path=Agencija}" />
-            <Button Name="Gost" Content="GOST" Height="400" Width="470" Margin="20,20,20,20" Background="Crimson"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Gost_PointerMoved" PointerExited="Gost_PointerExited" Command="{Binding Path=Gost}" />
+                <Button Content="O NAMA" Name="ONama" Background="Gold" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="80" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" PointerMoved="ONama_PointerMoved" PointerExited="ONama_PointerExited" />
 
-        </Grid>
-    </ScrollViewer>
+                <Button Name="Korisnik" Content="KORISNIK" Height="400" Width="470" Margin="20,20,20,20" Background="SlateBlue"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Korisnik_PointerMoved" PointerExited="Korisnik_PointerExited" Command="{Binding Path=Korisnik}" />
+                <Button Name="Agencija" Content="AGENCIJA" Height="400" Width="470" Margin="20,20,20,20" Background="MediumBlue"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Agencija_PointerMoved" PointerExited="Agencija_PointerExited" Command="{Binding Path=Agencija}" />
+                <Button Name="Gost" Content="GOST" Height="400" Width="470" Margin="20,20,20,20" Background="Crimson"  Foreground="FloralWhite" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" HorizontalAlignment="Center" PointerMoved="Gost_PointerMoved" PointerExited="Gost_PointerExited" Command="{Binding Path=Gost}" />
+
+            </Grid>
+        </ScrollViewer>
+
+    </Grid>
+    
 </Page>

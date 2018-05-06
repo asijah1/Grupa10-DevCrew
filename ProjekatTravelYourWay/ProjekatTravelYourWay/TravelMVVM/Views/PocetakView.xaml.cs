@@ -33,6 +33,7 @@ namespace ProjekatTravelYourWay.TravelMVVM.Views
             //Ovakav kontekst omogucava da se properties u PocetakViewModel koriste na nivou citavog page
             
 
+
             //Kada se sa neke druge forme uradi GoBack bez ove linije opet bi se pozvao konstruktor PocetakView i izgubili bi se podaci u PocetakViewModel
             //ovim se za povratak nazad cuva forma da se ponovo iskoristi
             //NavigationCacheMode = NavigationCacheMode.Required;
