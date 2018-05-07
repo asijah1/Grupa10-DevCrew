@@ -28,6 +28,12 @@ namespace ProjekatTravelYourWay.TravelMVVM.Models
 
         }
 
+        public string id
+        {
+            get;
+            set;
+        }
+
         private string ime;
         //required polje validacija, potreban je SetProperty
         [Required(ErrorMessage = "Niste unijeli svoje ime")]

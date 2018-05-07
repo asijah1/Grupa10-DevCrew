@@ -16,6 +16,7 @@ using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Windows.ApplicationModel.Contacts;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
 {
@@ -29,11 +30,11 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
 
         public ObservableCollection<Agencija> agencije { get; set; }
         public ObservableCollection<Korisnik> korisnici { get; set; }
-        public ObservableCollection<Agencija> zahtjeviAgencija { get; set; }
+        public ObservableCollection<ZahtjevAgencije> zahtjeviAgencija { get; set; }
 
         public Agencija trenutnaAgencija { get; set; }
         public Korisnik trenutniKorisnik { get; set; }
-        public Agencija trenutniZahtjevAgencije { get; set; }
+        public ZahtjevAgencije trenutniZahtjevAgencije { get; set; }
 
         public AdministratorStartViewModel(KorisnikStartViewModel parent)
         {
@@ -44,11 +45,11 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
 
             agencije = new ObservableCollection<Agencija>(TravelYourWay.agencije);
             korisnici = new ObservableCollection<Korisnik>(TravelYourWay.korisnici);
-            zahtjeviAgencija = new ObservableCollection<Agencija>(TravelYourWay.zahtjeviAgencija);
+            zahtjeviAgencija = new ObservableCollection<ZahtjevAgencije>(TravelYourWay.zahtjeviAgencija);
 
             trenutnaAgencija = new Agencija();
             trenutniKorisnik = new Korisnik();
-            trenutniZahtjevAgencije = new Agencija();
+            trenutniZahtjevAgencije = new ZahtjevAgencije();
 
         }
 
@@ -80,7 +81,7 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
             }
         }
 
-        public ObservableCollection<Agencija> ZahtjeviAgencija
+        public ObservableCollection<ZahtjevAgencije> ZahtjeviAgencija
         {
             get
             {
@@ -122,7 +123,7 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
             }
         }
 
-        public Agencija TrenutniZahtjevAgencije
+        public ZahtjevAgencije TrenutniZahtjevAgencije
         {
             get
             {
@@ -142,6 +143,12 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
 
             if(a != null)
             {
+                IMobileServiceTable<Agencija> userTableObjAgencija = App.MobileService.GetTable<Agencija>();
+
+                Agencija ag = new Agencija(a);
+
+                userTableObjAgencija.DeleteAsync(ag);
+
                 Agencije.Remove(a);
                 TravelYourWay.agencije = agencije.ToList();
             }
@@ -155,6 +162,12 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
 
             if(k != null)
             {
+                IMobileServiceTable<Korisnik> userTableObjKorisnik = App.MobileService.GetTable<Korisnik>();
+
+                Korisnik kor = new Korisnik(k);
+
+                userTableObjKorisnik.DeleteAsync(kor);
+
                 Korisnici.Remove(k);
                 TravelYourWay.korisnici = korisnici.ToList();
             }
@@ -164,7 +177,7 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
 
         public void odobriAgencijuFun(object parametar)
         {
-            Agencija a = ZahtjeviAgencija.FirstOrDefault(ag => ag.Naziv == trenutniZahtjevAgencije.Naziv);
+            ZahtjevAgencije a = ZahtjeviAgencija.FirstOrDefault(ag => ag.Naziv == trenutniZahtjevAgencije.Naziv);
 
             if (a != null)
             {
@@ -184,6 +197,16 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
 
                 //task.RunSynchronously();
 
+                Agencija nova = new Agencija(a);
+                ZahtjevAgencije noviZahtjev = new ZahtjevAgencije(a);
+
+                
+
+                IMobileServiceTable<ZahtjevAgencije> userTableObjZahtjeviAgencija = App.MobileService.GetTable<ZahtjevAgencije>();
+                IMobileServiceTable<Agencija> userTableObjAgencija = App.MobileService.GetTable<Agencija>();
+
+                userTableObjAgencija.InsertAsync(nova);
+                userTableObjZahtjeviAgencija.DeleteAsync(noviZahtjev);
 
                 Agencije.Add(a);
                 ZahtjeviAgencija.Remove(a);

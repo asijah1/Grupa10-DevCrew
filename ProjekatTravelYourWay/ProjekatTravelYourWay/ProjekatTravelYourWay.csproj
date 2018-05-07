@@ -129,6 +129,7 @@
     <Compile Include="TravelMVVM\Models\Korisnik.cs" />
     <Compile Include="TravelMVVM\Models\Osoba.cs" />
     <Compile Include="TravelMVVM\Models\TravelYourWay.cs" />
+    <Compile Include="TravelMVVM\Models\ZahtjevAgencije.cs" />
     <Compile Include="TravelMVVM\ViewModels\AdministratorStartViewModel.cs" />
     <Compile Include="TravelMVVM\ViewModels\AgencijaRegistracijaViewModel.cs" />
     <Compile Include="TravelMVVM\ViewModels\AgencijaStartViewModel.cs" />
@@ -228,6 +229,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Mobile.Client">
+      <Version>4.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.6</Version>
     </PackageReference>

@@ -11,6 +11,7 @@ using ProjekatTravelYourWay.TravelMVVM.Models;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
 {
@@ -18,9 +19,10 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
     {
         public AgencijaStartViewModel Parent { get; set; }
         public ICommand RegistracijaAgencije { get; set; }
-        public Agencija agencija { get; set; }
+        public ZahtjevAgencije agencija { get; set; }
 
-        public Agencija Agencija
+
+        public ZahtjevAgencije Agencija
         {
             get
             {
@@ -38,7 +40,7 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
         {
             this.Parent = parent;
             RegistracijaAgencije = new RelayCommand<object>(provjeri);
-            Agencija = new Agencija();
+            Agencija = new ZahtjevAgencije();
             Agencija.ErrorsChanged += Vm_ErrorsChanged;
 
         }
@@ -69,6 +71,10 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
             if (a == null)
             {
                 TravelYourWay.zahtjeviAgencija.Add(Agencija);
+
+                IMobileServiceTable<ZahtjevAgencije> userTableObjZahtjeviAgencija = App.MobileService.GetTable<ZahtjevAgencije>();
+
+                userTableObjZahtjeviAgencija.InsertAsync(Agencija);
 
                 UspjesnoPoslanZahtjevObavijest();
 

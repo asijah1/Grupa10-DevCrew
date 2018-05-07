@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ProjekatTravelYourWay.TravelMVVM.Views;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace ProjekatTravelYourWay
 {
@@ -32,6 +33,9 @@ namespace ProjekatTravelYourWay
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
+
+        public static MobileServiceClient MobileService = new MobileServiceClient("https://TravelYourWay.azurewebsites.net");
+
 
         public static Frame splitViewFrame = null;
 

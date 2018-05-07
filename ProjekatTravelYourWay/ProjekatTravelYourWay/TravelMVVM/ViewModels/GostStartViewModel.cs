@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using ProjekatTravelYourWay.TravelMVVM.Models;
+using Microsoft.WindowsAzure.MobileServices;
 
 
 namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
@@ -66,6 +67,10 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
             if (k == null)
             {
                 TravelYourWay.korisnici.Add(Korisnik);
+
+                IMobileServiceTable<Korisnik> userTableObjKorisnici = App.MobileService.GetTable<Korisnik>();
+
+                userTableObjKorisnici.InsertAsync(Korisnik);
 
                 UspjesnaRegistracijaObavijest();
 

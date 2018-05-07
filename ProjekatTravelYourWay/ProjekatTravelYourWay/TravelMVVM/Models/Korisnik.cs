@@ -17,6 +17,19 @@ namespace ProjekatTravelYourWay.TravelMVVM.Models
 
         }
 
+        public Korisnik(Korisnik k)
+        {
+            id = k.id;
+            Ime = k.Ime;
+            Prezime = k.Prezime;
+            DatumRodjenja = k.DatumRodjenja;
+            Drzava = k.Drzava;
+            Email = k.Email;
+            KorisnickoIme = k.KorisnickoIme;
+            Sifra = k.Sifra;
+
+        }
+
         public void prijaviDogadjaj()
         {
 

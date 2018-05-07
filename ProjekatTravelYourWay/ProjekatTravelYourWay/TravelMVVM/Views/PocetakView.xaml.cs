@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ProjekatTravelYourWay.TravelMVVM.ViewModels;
 using Windows.UI.Core;
+using Microsoft.WindowsAzure.MobileServices;
+using ProjekatTravelYourWay.TravelMVVM.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -31,8 +33,8 @@ namespace ProjekatTravelYourWay.TravelMVVM.Views
 
             //Svi Binding Koriste properties iz PocetakViewModel
             //Ovakav kontekst omogucava da se properties u PocetakViewModel koriste na nivou citavog page
-            
 
+            inicijalizirajIzBaze();
 
             //Kada se sa neke druge forme uradi GoBack bez ove linije opet bi se pozvao konstruktor PocetakView i izgubili bi se podaci u PocetakViewModel
             //ovim se za povratak nazad cuva forma da se ponovo iskoristi
@@ -97,6 +99,24 @@ namespace ProjekatTravelYourWay.TravelMVVM.Views
             ONama.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 215, 0));
             ONama.Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
         }
+
+
+        //inicijalizacija iz baze podataka
+
+        public async void inicijalizirajIzBaze()
+        {
+
+            IMobileServiceTable<Agencija> userTableObjAgencije = App.MobileService.GetTable<Agencija>();
+            IMobileServiceTable<Korisnik> userTableObjKorisnici = App.MobileService.GetTable<Korisnik>();
+            IMobileServiceTable<ZahtjevAgencije> userTableObjZahtjeviAgencija = App.MobileService.GetTable<ZahtjevAgencije>();
+
+
+            TravelYourWay.zahtjeviAgencija = await userTableObjZahtjeviAgencija.ToListAsync();
+            TravelYourWay.agencije = await userTableObjAgencije.ToListAsync();
+            TravelYourWay.korisnici = await userTableObjKorisnici.ToListAsync();
+            
+        }
+
 
     }
 }

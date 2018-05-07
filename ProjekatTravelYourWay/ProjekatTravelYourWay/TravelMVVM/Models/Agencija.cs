@@ -25,6 +25,22 @@ namespace ProjekatTravelYourWay.TravelMVVM.Models
             sifra = "";
         }
 
+        public Agencija(Agencija a)
+        {
+            id = a.id;
+            Naziv = a.Naziv;
+            DatumOsnivanja = a.DatumOsnivanja;
+            Sjediste = a.Sjediste;
+            Email = a.Email;
+            Sifra = a.Sifra;
+        }
+
+        public string id
+        {
+            get;
+            set;
+        }
+
         private string naziv;
         //required polje validacija, potreban je SetProperty
         [Required(ErrorMessage = "Niste unijeli naziv agencije")]
