@@ -104,7 +104,7 @@
 
                     </Grid.RowDefinitions>
 
-                    <ListView x:Name="listaAgencija" ItemsSource="{Binding Agencije}" IsItemClickEnabled="True" ItemTemplate="{StaticResource AgencijaListTemplate}"  ScrollViewer.VerticalScrollBarVisibility="Auto" SelectedItem="{Binding Path=trenutnaAgencija, Mode=TwoWay}">
+                    <ListView x:Name="listaAgencija" ItemsSource="{Binding Agencije}" IsItemClickEnabled="True" ItemTemplate="{StaticResource AgencijaListTemplate}"  ScrollViewer.VerticalScrollBarVisibility="Auto" SelectedItem="{Binding Path=TrenutnaAgencija, Mode=TwoWay}">
                         <ListView.Template>
                             <!--Rucno mjenjanje liste kako bi se dodali naslovi (headers) kolona
                                 Na ovaj nacin se rucno mogu dodati neke kontrole u listu za specijalne liste.-->
@@ -120,10 +120,13 @@
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock HorizontalAlignment="Center" Grid.Column="0">Naziv</TextBlock>
-                                        <TextBlock HorizontalAlignment="Center" Grid.Column="1">Sjediste</TextBlock>
-                                        <TextBlock HorizontalAlignment="Center" Grid.Column="2">Email</TextBlock>
+                                        <TextBlock HorizontalAlignment="Center" Grid.Column="0" FontWeight="Bold">Naziv</TextBlock>
+                                        <TextBlock HorizontalAlignment="Center" Grid.Column="1" FontWeight="Bold">Sjediste</TextBlock>
+                                        <TextBlock HorizontalAlignment="Center" Grid.Column="2" FontWeight="Bold">Email</TextBlock>
                                     </Grid>
+
+                                    <Border Grid.Row="0" BorderBrush="Silver" BorderThickness="0,0,0,1"/>
+
                                     <!-- Ostatak da bude lista koja je orginalno trebala biti -->
                                     <ItemsPresenter Grid.Row="1"></ItemsPresenter>
                                 </Grid>
@@ -154,7 +157,7 @@
                     </Grid.RowDefinitions>
 
 
-                    <ListView x:Name="listaKorisnika" ItemsSource="{Binding Korisnici}" IsItemClickEnabled="True" ItemTemplate="{StaticResource KorisnikListTemplate}"  ScrollViewer.VerticalScrollBarVisibility="Auto" SelectedItem="{Binding Path=trenutniKorisnik, Mode=TwoWay}">
+                    <ListView x:Name="listaKorisnika" ItemsSource="{Binding Korisnici}" IsItemClickEnabled="True" ItemTemplate="{StaticResource KorisnikListTemplate}"  ScrollViewer.VerticalScrollBarVisibility="Auto" SelectedItem="{Binding Path=TrenutniKorisnik, Mode=TwoWay}">
                         <ListView.Template>
                             <!--Rucno mjenjanje liste kako bi se dodali naslovi (headers) kolona
                                 Na ovaj nacin se rucno mogu dodati neke kontrole u listu za specijalne liste.-->
@@ -172,12 +175,15 @@
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock HorizontalAlignment="Center" Grid.Column="0">Ime</TextBlock>
-                                        <TextBlock HorizontalAlignment="Center" Grid.Column="1">Prezime</TextBlock>
-                                        <TextBlock HorizontalAlignment="Center" Grid.Column="2">Drzava</TextBlock>
-                                        <TextBlock HorizontalAlignment="Center" Grid.Column="3">Email</TextBlock>
-                                        <TextBlock HorizontalAlignment="Center" Grid.Column="4">Korisničko ime</TextBlock>
+                                        <TextBlock HorizontalAlignment="Center" Grid.Column="0" FontWeight="Bold">Ime</TextBlock>
+                                        <TextBlock HorizontalAlignment="Center" Grid.Column="1" FontWeight="Bold">Prezime</TextBlock>
+                                        <TextBlock HorizontalAlignment="Center" Grid.Column="2" FontWeight="Bold">Drzava</TextBlock>
+                                        <TextBlock HorizontalAlignment="Center" Grid.Column="3" FontWeight="Bold">Email</TextBlock>
+                                        <TextBlock HorizontalAlignment="Center" Grid.Column="4" FontWeight="Bold">Korisničko ime</TextBlock>
                                     </Grid>
+                                    
+                                    <Border Grid.Row="0" BorderBrush="Silver" BorderThickness="0,0,0,1"/>
+
                                     <!-- Ostatak da bude lista koja je orginalno trebala biti -->
                                     <ItemsPresenter Grid.Row="1"></ItemsPresenter>
                                 </Grid>
@@ -207,7 +213,7 @@
 
                     </Grid.RowDefinitions>
 
-                    <ListView x:Name="listaZahtjevaAgencija" ItemsSource="{Binding ZahtjeviAgencija}" IsItemClickEnabled="True" ItemTemplate="{StaticResource AgencijaListTemplate}"  ScrollViewer.VerticalScrollBarVisibility="Auto" SelectedItem="{Binding Path=trenutniZahtjevAgencije, Mode=TwoWay}">
+                    <ListView x:Name="listaZahtjevaAgencija" ItemsSource="{Binding ZahtjeviAgencija}" IsItemClickEnabled="True" ItemTemplate="{StaticResource AgencijaListTemplate}"  ScrollViewer.VerticalScrollBarVisibility="Auto" SelectedItem="{Binding Path=TrenutniZahtjevAgencije, Mode=TwoWay}">
                         <ListView.Template>
                             <!--Rucno mjenjanje liste kako bi se dodali naslovi (headers) kolona
                                 Na ovaj nacin se rucno mogu dodati neke kontrole u listu za specijalne liste.-->
@@ -223,10 +229,13 @@
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock HorizontalAlignment="Center" Grid.Column="0">Naziv</TextBlock>
-                                        <TextBlock HorizontalAlignment="Center" Grid.Column="1">Sjediste</TextBlock>
-                                        <TextBlock HorizontalAlignment="Center" Grid.Column="2">Email</TextBlock>
+                                        <TextBlock HorizontalAlignment="Center" Grid.Column="0" FontWeight="Bold">Naziv</TextBlock>
+                                        <TextBlock HorizontalAlignment="Center" Grid.Column="1" FontWeight="Bold">Sjediste</TextBlock>
+                                        <TextBlock HorizontalAlignment="Center" Grid.Column="2" FontWeight="Bold">Email</TextBlock>
                                     </Grid>
+
+                                    <Border Grid.Row="0" BorderBrush="Silver" BorderThickness="0,0,0,1"/>
+                                    
                                     <!-- Ostatak da bude lista koja je orginalno trebala biti -->
                                     <ItemsPresenter Grid.Row="1"></ItemsPresenter>
                                 </Grid>

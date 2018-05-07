@@ -27,9 +27,9 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
         public ICommand obrisiKorisnika { get; set; }
         public ICommand odobriAgenciju { get; set; }
 
-        public List<Agencija> agencije { get; set; }
-        public List<Korisnik> korisnici { get; set; }
-        public List<Agencija> zahtjeviAgencija { get; set; }
+        public ObservableCollection<Agencija> agencije { get; set; }
+        public ObservableCollection<Korisnik> korisnici { get; set; }
+        public ObservableCollection<Agencija> zahtjeviAgencija { get; set; }
 
         public Agencija trenutnaAgencija { get; set; }
         public Korisnik trenutniKorisnik { get; set; }
@@ -42,9 +42,9 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
             obrisiKorisnika = new RelayCommand<object>(obrisiKorisnikaFun);
             odobriAgenciju = new RelayCommand<object>(odobriAgencijuFun);
 
-            agencije = TravelYourWay.agencije;
-            korisnici = TravelYourWay.korisnici;
-            zahtjeviAgencija = TravelYourWay.zahtjeviAgencija;
+            agencije = new ObservableCollection<Agencija>(TravelYourWay.agencije);
+            korisnici = new ObservableCollection<Korisnik>(TravelYourWay.korisnici);
+            zahtjeviAgencija = new ObservableCollection<Agencija>(TravelYourWay.zahtjeviAgencija);
 
             trenutnaAgencija = new Agencija();
             trenutniKorisnik = new Korisnik();
@@ -52,7 +52,7 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
 
         }
 
-        public List<Agencija> Agencije
+        public ObservableCollection<Agencija> Agencije
         {
             get
             {
@@ -66,7 +66,7 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
             }
         }
 
-        public List<Korisnik> Korisnici
+        public ObservableCollection<Korisnik> Korisnici
         {
             get
             {
@@ -80,7 +80,7 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
             }
         }
 
-        public List<Agencija> ZahtjeviAgencija
+        public ObservableCollection<Agencija> ZahtjeviAgencija
         {
             get
             {
@@ -104,7 +104,7 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
             set
             {
                 trenutnaAgencija = value;
-                OnNotifyPropertyChanged("trenutnaAgencija");
+                OnNotifyPropertyChanged("TrenutnaAgencija");
             }
         }
 
@@ -118,7 +118,7 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
             set
             {
                 trenutniKorisnik = value;
-                OnNotifyPropertyChanged("trenutniKorisnik");
+                OnNotifyPropertyChanged("TrenutniKorisnik");
             }
         }
 
@@ -132,7 +132,7 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
             set
             {
                 trenutniZahtjevAgencije = value;
-                OnNotifyPropertyChanged("trenutniZahtjevAgencije");
+                OnNotifyPropertyChanged("TrenutniZahtjevAgencije");
             }
         }
 
@@ -143,10 +143,10 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
             if(a != null)
             {
                 Agencije.Remove(a);
-                TravelYourWay.agencije = agencije;
+                TravelYourWay.agencije = agencije.ToList();
             }
 
-            TrenutnaAgencija = null;
+            //TrenutnaAgencija = null;
         }
 
         public void obrisiKorisnikaFun(object parametar)
@@ -156,10 +156,10 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
             if(k != null)
             {
                 Korisnici.Remove(k);
-                TravelYourWay.korisnici = korisnici;
+                TravelYourWay.korisnici = korisnici.ToList();
             }
 
-            TrenutniKorisnik = null;
+            //TrenutniKorisnik = null;
         }
 
         public void odobriAgencijuFun(object parametar)
@@ -168,27 +168,31 @@ namespace ProjekatTravelYourWay.TravelMVVM.ViewModels
 
             if (a != null)
             {
+                
+
+                Contact contact = new Contact();
+
+                var personalEmail = new Windows.ApplicationModel.Contacts.ContactEmail();
+                personalEmail.Address = TrenutniZahtjevAgencije.Email;
+                contact.Emails.Add(personalEmail);
+
+                string subject = "Travel Your Way Agency Service";
+
+                string message = "Poštovani," + System.Environment.NewLine + System.Environment.NewLine + "Ovom prilikom Vas obavještavamo da je Vaš zahtjev za registraciju agencije \"" + TrenutniZahtjevAgencije.Naziv + "\" odobren. Ugodno korištenje aplikacije Vam želi naš Admin team." + System.Environment.NewLine + System.Environment.NewLine + "Lijep pozdrav," + System.Environment.NewLine + "Travel Your Way";
+
+                var task = ComposeEmail(contact, subject, message);
+
+                //task.RunSynchronously();
+
+
                 Agencije.Add(a);
                 ZahtjeviAgencija.Remove(a);
-                TravelYourWay.agencije = agencije;
-                TravelYourWay.zahtjeviAgencija = zahtjeviAgencija;
+                TravelYourWay.agencije = agencije.ToList();
+                TravelYourWay.zahtjeviAgencija = zahtjeviAgencija.ToList();
+
+                //TrenutniZahtjevAgencije = null;
+
             }
-
-            Contact contact = new Contact();
-
-            var personalEmail = new Windows.ApplicationModel.Contacts.ContactEmail();
-            personalEmail.Address = TrenutniZahtjevAgencije.Email;
-            contact.Emails.Add(personalEmail);
-
-            string subject = "Travel Your Way Agency Service";
-
-            string message = "Ovom prilikom Vas obavještavamo da je Vaš zahtjev za registraciju agencije odobren. Ugodno korištenje aplikacije Vam želi naš Admin team.";
-
-            var task = ComposeEmail(contact, subject, message);
-
-            //task.RunSynchronously();
-
-            //TrenutniZahtjevAgencije = null;
 
         }
 

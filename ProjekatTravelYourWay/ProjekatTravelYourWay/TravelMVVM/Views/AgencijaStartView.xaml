@@ -75,8 +75,8 @@
 
             <TextBlock TextWrapping="Wrap" Name="PrijavaBlok" Text="Molimo unesite podatke za identifikaciju vaše agencije" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Margin="20,20,20,40" />
 
-            <TextBox PlaceholderText="Naziv agencije" Name="NazivAgencije" FontSize="22" Margin="20,20,20,20" HorizontalAlignment="Center" Width="300" />
-            <PasswordBox PlaceholderText="Sifra" Name="Sifra" FontSize="22"  Margin="20,20,20,20" HorizontalAlignment="Center" Width="300" />
+            <TextBox PlaceholderText="Naziv agencije" Name="NazivAgencije" FontSize="22" Margin="20,20,20,20" HorizontalAlignment="Center" Width="300" Text="{Binding Path=NazivAgencije, Mode=TwoWay}" />
+            <PasswordBox PlaceholderText="Sifra" Name="Sifra" FontSize="22"  Margin="20,20,20,20" HorizontalAlignment="Center" Width="300" Password="{Binding Path=Sifra, Mode=TwoWay}" />
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <HyperlinkButton Content="Zaboravljena šifra?" Name="ZaboravljenaSifra" FontSize="16" HorizontalAlignment="Center"  Margin="20,20,40,20" />
                 <HyperlinkButton Content="Registracija nove agencije?" Name="RegistracijaAgencije" FontSize="16" HorizontalAlignment="Center"  Margin="20,20,20,20" Command="{Binding Path=Registracija}" />
