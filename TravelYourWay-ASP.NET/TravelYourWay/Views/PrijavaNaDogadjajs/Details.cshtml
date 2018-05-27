@@ -1,0 +1,34 @@
+﻿@model TravelYourWay.Models.PrijavaNaDogadjaj
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PrijavaNaDogadjaj</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dogadjaj.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dogadjaj.id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.korisnikId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.korisnikId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
