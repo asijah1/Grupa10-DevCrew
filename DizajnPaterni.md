@@ -43,3 +43,43 @@ Ne.
 ## 3.4. Ako nije, gdje bi bilo dobro mjesto za njegovu upotrebu i zasto?
 Prilikom same prijave korisnik ima tri opcije: registrovani korisnik, gost, agencija.
 Za svaki tip korisnika imamo drugačiji prikaz pa samim tim možemo i drugačije podatke dobiti(pomoću api request-a prema našoj bazi).
+
+
+# 4. Adapter(strukturalni patern)
+## 4.1. Kada koristimo?
+Adapter patern koristimo kada želimo proširiti funkcionalnosti određene klase koja je već implementirana.
+Pri implementaciji ovog paterna, ne mijenjamo postojeću klasu, već modifikujemo interfejs koji klasa implementira.
+Obično se koristi za proširenje funkcionalnosti ogromnih klasa.
+## 4.2. Kako se koristi?
+Kreiramo novu adapter klasu, koja predstavlja posrednika između klase i interfejsa.
+## 4.3. Korišten u projektu?
+Ne.
+## 4.4. Ako nije, gdje bi bilo dobro mjesto za njegovu upotrebu i zašto?
+Želimo li proširiti funkcionalnost neke klase poput Korisnika, da može npr. odustati od događaja možemo se poslužiti ovim paternom, mada trenutne klase nisu kompleksnog obima, tako da ne bi predstavljao problem modifikovati samu klasu.
+
+# 5. Decorator(strukturalni patern)
+## 5.1. Kada koristimo?
+Decorator patern služi za dinamičko dodavanje elemenata i funkcionalnosti postojećim objektima, a da objekat o tome ništa ne zna. 
+Obično se koristi za implementaciju različitih kompresija videa, simultano prevođenje itd.
+## 5.2. Kako se koristi?
+Implementacija ovog paterna podrazumijeva implementaciju klase *Component*, interfejsa *IComponent* te klase *Decorator*.
+## 5.3. Korišten u projektu?
+Ne.
+## 5.4. Ako nije, gdje bi bilo dobro mjesto za njegovu upotrebu i zašto?
+Trenutno ne postoji mjesto za upotrebu ovog paterna čija bi implementacija poboljšala kvalitet projekta.
+
+# 6. Prototype(kreacijski patern)
+## 6.1. Kada koristimo?
+Ako je kreiranje novog objekta resursno zahtjevno, tada je zgodno klonirati postojeći objekat.
+To se radi pomoću Prototyoe paterna.
+## 6.2. Kako se koristi?
+Implementacija ovog paterna podrazumijeva implementaciju klase *Client*, interfejsa *IPrototype* te klase-prototipi.
+## 6.3. Korišten u projektu?
+Ne.
+## 6.4. Ako nije, gdje bi bilo dobro mjesto za njegovu upotrebu i zašto?
+Klase u projektu nisu velikog obima i nisu resursno zahtjevne, pa i nema potrebe implementirati ovaj patern.
+
+
+
+
+
