@@ -11,7 +11,7 @@ Ne.
 ## 1.4 Ako nije, gdje bi bilo dobro mjesto za njegovu upotrebu i zašto?
 Nisam siguran da postoji mjesto u nasoj aplikaciji za singleton patern.
 
-# 2. Proxy()
+# 2. Proxy(strukturni patern)
 ## 2.1 Kada koristimo?
 Koristimo ga kada ne zelimo da neko direktno pristupa objektu nego zelimo da imamo posrednika do stvarnog objekta.
 Razlog moze biti sigurnost, moze biti da ne mozemo direktno instancirati objekt(npr. zbog restrikcije pristupa). 
@@ -28,7 +28,7 @@ Sve akcije koje možemo izvesti (prijavljivanje na događaj, ostavljanje utiska(
 počinju u našem internet pretraživaču, a zatim se šalju putem interneta do najbližeg servera. Objekti su stranice, a proxy
 objekti su mehanizmi koji dozvoljavaju registrovanje, logovanje i pristup. 
 
-# 3. Strategy()
+# 3. Strategy(patern ponasanja)
 ## 3.1 Kada koristimo?
 Koristimo ga kada imamo neki algoritam koji posjeduje vise razlicitih verzija.
 Strategy patern omogućava klijentu izbor jednog od algoritma iz familije algoritama za korištenje.
