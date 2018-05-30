@@ -79,7 +79,60 @@ Ne.
 ## 6.4. Ako nije, gdje bi bilo dobro mjesto za njegovu upotrebu i zašto?
 Klase u projektu nisu velikog obima i nisu resursno zahtjevne, pa i nema potrebe implementirati ovaj patern.
 
+# 7. Bulider(kreacijski patern)
+## 7.1. Kada koristimo?
+Builder patern koristimo kada želimo da odvajamo specifikacije kompleksnih objekata od njihove stvarne
+konstrukcije. Isti konstrukcijski proces može kreirati različite reprezentacije. Koriste se najčešće u aplikacijama koje kreiraju kompleksne strukture.
+## 7.2. Kako se koristi?
+Osnovni elementi paterna su: IBuilder- interfejs koji definira pojedinačne dijelove koji se koriste za izgradnju produkta; Director klasa koja sadrži neophodnu sekvencu operacija za izgradnju produkta; Builder klasa koja se poziva od strane direktora (Director klasa) da se izgradi produkt; Product klasa na osnovu koje se kreira objekat koji se gradi preko dijelova. 
 
+U sklopu paterna može biti više direktora i bildera (Director i Builder klase). Klijent klasa preko Construct metode poziva odgovarajuću Director klasu koja spaja dijelove koji se nude preko Builder interfejsa. Product klasa održava listu dijelova koja je rezultat
+konstrukcijskog procesa. 
+## 7.3. Korišten u projektu?
+Ne.
+## 7.4. Ako nije, gdje bi bilo dobro mjesto za njegovu upotrebu i zašto?
+Klase u projektu nisu velikog obima i nisu kompleksne, pa i nema potrebe implementirati ovaj patern.
 
+# 8. Factory Method(kreacijski patern)
+## 8.1. Kada koristimo?
+Factory Method paterna koristimo kada želimo da omogućimo kreiranje objekata na način da podklase odluče koju klasu instancirati. 
+## 8.2. Kako se koristi?
+Različite podklase mogu na različite načine implementirati interfejs. Factory Method instancira odgovarajuću podklasu(izvedenu klasu) preko posebne metode na osnovu informacije od strane klijenta ili na osnovu tekućeg stanja.
+## 8.3. Korišten u projektu?
+Ne.
+## 8.4. Ako nije, gdje bi bilo dobro mjesto za njegovu upotrebu i zašto?
+Nema puno izvedenih klasa u našem projektu, tako da je teže naći kontkretnu primjenu ovog paterna.
+
+# 9. Observe(Patern ponašanja)
+## 9.1. Kada koristimo?
+Observer paterna koristimo kada želimo da uspostavimo relaciju između objekata tako kada jedan objekat promijeni stanje, drugi zainteresirani objekti se obavještavaju.
+## 9.2. Kako se koristi?
+Struktura ovog paterna se sastoji od:
+  Subject klasa – instance ove klase neovisno
+mijenjaju svoje stanje i obavještavaju Observers.
+  IObserver – Interfejs za Observers, sadrži samo
+jednu metodu koja se poziva kada se promijeni
+stanje neke Subject instance.
+  Observer – konkretna klasa koja obezbjeđuje
+konkretnu implementaciju za IObserver interfejs.
+  Update – metoda koja formira interfejs između
+klasa Subject i Observer.
+  Notify -Event mehanizam za pozivanje Update
+operacije za sve posmatrače (Observers). 
+
+Implementacija podrazumijeva:
+  Subject klasa sadrži privatni događaj (private
+event) Notify.
+  Kada se njegovo stanje promijeni on aktivira
+događaj (event) i šalje svoje stanje kao
+parametar Update metodi unutar Observer
+klase (metoda mora biti prije registrirana na
+Subject klasu).
+  Može biti više različitih posmatrača sa svojim
+Update metodama.
+## 9.3. Korišten u projektu?
+Ne.
+## 9.4. Ako nije, gdje bi bilo dobro mjesto za njegovu upotrebu i zašto?
+Subject klasa bi mogla da bude događaj, IObserver bi bio interfejst sa metodom koja bi se pozivala kada bi se desila promjena na događaju. Agencija bi bila klasa koja bi implementirala IObserver interfejs. Update metoda bi bila metoda tipa obavijesti() koja bi obaviještala sve Korisnike koji su prijavljeni na događaj da je došlo do određenih izmjena.
 
 
